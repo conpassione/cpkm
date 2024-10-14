@@ -1,0 +1,12 @@
+composer.lock
+.DS_Store
+.env
+.build/
+.ddev/
+.git/
+.idea/
+bin/
+Build/
+config/
+packages/
+var/
