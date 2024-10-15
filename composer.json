@@ -21,7 +21,6 @@
 	"version": "1.0.0",
 	"require": {
 		"conpassione/cpdevsite": "^1.0",
-		"contentblocks/content-blocks": "*",
 		"typo3/cms-core": "^13"
 	},
 	"require-dev": {
