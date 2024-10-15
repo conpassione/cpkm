@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-10-15T09:53:33+00:00" product-name="conpassione/kennel">
+		<header/>
+		<body>
+			<trans-unit id="title" resname="title">
+				<source>Kennel</source>
+			</trans-unit>
+			<trans-unit id="palettes.p_kennel.label" resname="palettes.p_kennel.label">
+				<source>Kennel</source>
+			</trans-unit>
+			<trans-unit id="palettes.p_kennel.description" resname="palettes.p_kennel.description">
+				<source>FCI-name and Status</source>
+			</trans-unit>
+			<trans-unit id="k_name.label" resname="k_name.label">
+				<source>FCI name</source>
+			</trans-unit>
+			<trans-unit id="k_status.label" resname="k_status.label">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="k_status.items.0.label" resname="k_status.items.0.label">
+				<source>active?</source>
+			</trans-unit>
+			<trans-unit id="k_show.label" resname="k_show.label">
+				<source>On kennel list</source>
+			</trans-unit>
+			<trans-unit id="k_show.items.0.label" resname="k_show.items.0.label">
+				<source>display?</source>
+			</trans-unit>
+			<trans-unit id="k_variety.label" resname="k_variety.label">
+				<source>Variety</source>
+			</trans-unit>
+			<trans-unit id="palettes.p_breeder.label" resname="palettes.p_breeder.label">
+				<source>Breeder</source>
+			</trans-unit>
+			<trans-unit id="palettes.p_breeder.description" resname="palettes.p_breeder.description">
+				<source>Breeders address</source>
+			</trans-unit>
+			<trans-unit id="k_first_name.label" resname="k_first_name.label">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="k_last_name.label" resname="k_last_name.label">
+				<source>Last name</source>
+			</trans-unit>
+			<trans-unit id="k_address.label" resname="k_address.label">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="k_phone.label" resname="k_phone.label">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="k_mobile.label" resname="k_mobile.label">
+				<source>Mobile</source>
+			</trans-unit>
+			<trans-unit id="k_email.label" resname="k_email.label">
+				<source>eMail</source>
+			</trans-unit>
+			<trans-unit id="k_web.label" resname="k_web.label">
+				<source>Website</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

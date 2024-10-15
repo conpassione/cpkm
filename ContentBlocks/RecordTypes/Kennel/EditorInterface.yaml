@@ -3,16 +3,22 @@ typeName: conpassione-kennel
 title: 'Kennel'
 group: csbp
 table: tx_cpkm_domain_model_kennel
-labelField: k_name
-sortField: title
+languageAware: false
+labelField:
+  - k_name
+  - k_last_name
+  - k_first_name
+sortField:
+  - identifier: k_name
+    order: asc
+  - identifier: k_last_name
+    order: asc
 security:
   ignorePageTypeRestriction: true
 prefixFields: false
 fields:
   - identifier: p_kennel
     type: Palette
-    label: Zuchtstaette
-    description: Daten zur Zuchtstaette
     fields:
     - identifier: k_name
       type: Text
@@ -20,23 +26,17 @@ fields:
       size: 30
     - identifier: k_status
       type: Checkbox
-      renderType: checkboxToggle
       default: 0
       items:
         - label: aktiv?
     - identifier: k_show
       type: Checkbox
-      renderType: checkboxToggle
       default: 0
       items:
         - label: anzeigen?
-    - identifier: hidden
-      type: Checkbox
-      useExistingField: true
     - identifier: k_variety
       type: Checkbox
-      renderType: checkboxToggle
-      cols: 3
+      cols: 1
       default: 0
       items:
         - label: '---'
@@ -47,38 +47,30 @@ fields:
           value: 2
   - identifier: p_breeder
     type: Palette
-    label: Züchter
     description: Adresse der Zuchtstätte
     fields:
     - identifier: k_first_name
       type: Text
       size: 20
-      label: Vorname
     - identifier: k_last_name
       type: Text
       size: 20
-      label: Nachname
     - type: Linebreak
     - identifier: k_address
       type:  Textarea
-      label: Adresse
       size: 30
       rows: 5
     - type: Linebreak
     - identifier: k_phone
       type: Text
-      label: Phone
       size: 20
     - identifier: k_mobile
       type: Text
-      label: Handy
       size: 20
     - type: Linebreak
     - identifier: k_email
       type: Text
-      label: E-Mail
       size: 20
     - identifier: k_web
       type: Text
-      label: Web
       size: 20

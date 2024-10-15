@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="Labels.xlf" source-language="en"  target-language="de"  date="2024-10-15T09:53:33+00:00" product-name="conpassione/kennel">
+		<header/>
+		<body>
+			<trans-unit id="title" resname="title">
+				<source>Kennel</source>
+				<target>Zuchtstätte</target>
+			</trans-unit>
+			<trans-unit id="palettes.p_kennel.label" resname="palettes.p_kennel.label">
+				<source>Kennel</source>
+				<target>Zuchtstätte</target>
+			</trans-unit>
+			<trans-unit id="palettes.p_kennel.description" resname="palettes.p_kennel.description">
+				<source>FCI-name and Status</source>
+				<target>FCI Name und Status</target>
+			</trans-unit>
+			<trans-unit id="k_name.label" resname="k_name.label">
+				<source>Kennel name (FCI)</source>
+				<target>Name der Zuchtstätte (FCI)</target>
+			</trans-unit>
+			<trans-unit id="k_status.label" resname="k_status.label">
+				<source>Status</source>
+				<target>Status</target>
+			</trans-unit>
+			<trans-unit id="k_status.items.0.label" resname="k_status.items.0.label">
+				<source>active?</source>
+				<target>aktiv?</target>
+			</trans-unit>
+			<trans-unit id="k_show.label" resname="k_show.label">
+				<source>On kennel list</source>
+				<target>Auf Züchterliste</target>
+			</trans-unit>
+			<trans-unit id="k_show.items.0.label" resname="k_show.items.0.label">
+				<source>display?</source>
+				<target>anzeigen?</target>
+			</trans-unit>
+			<trans-unit id="k_variety.label" resname="k_variety.label">
+				<source>Variety</source>
+				<target>Varietät</target>
+			</trans-unit>
+			<trans-unit id="palettes.p_breeder.label" resname="palettes.p_breeder.label">
+				<source>Breeder</source>
+				<target>Züchter</target>
+			</trans-unit>
+			<trans-unit id="palettes.p_breeder.description" resname="palettes.p_breeder.description">
+				<source>Breeders address</source>
+				<target>Adresse des Züchters</target>
+			</trans-unit>
+			<trans-unit id="k_first_name.label" resname="k_first_name.label">
+				<source>Name</source>
+				<target>Vorname</target>
+			</trans-unit>
+			<trans-unit id="k_last_name.label" resname="k_last_name.label">
+				<source>Last name</source>
+				<target>Nachname</target>
+			</trans-unit>
+			<trans-unit id="k_address.label" resname="k_address.label">
+				<source>Address</source>
+				<target>Adresse</target>
+			</trans-unit>
+			<trans-unit id="k_phone.label" resname="k_phone.label">
+				<source>Phone</source>
+				<target>Telefon</target>
+			</trans-unit>
+			<trans-unit id="k_mobile.label" resname="k_mobile.label">
+				<source>Mobile</source>
+				<target>Handy</target>
+			</trans-unit>
+			<trans-unit id="k_email.label" resname="k_email.label">
+				<source>eMail</source>
+				<target>E-Mail</target>
+			</trans-unit>
+			<trans-unit id="k_web.label" resname="k_web.label">
+				<source>Website</source>
+				<target>Website</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
