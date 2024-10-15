@@ -17,7 +17,7 @@ fields:
     - identifier: k_name
       type: Text
       required: true
-      max: 30
+      size: 30
     - identifier: k_status
       type: Checkbox
       renderType: checkboxToggle
@@ -36,8 +36,7 @@ fields:
     - identifier: k_variety
       type: Checkbox
       renderType: checkboxToggle
-      cols: 1
-      rows: 3
+      cols: 3
       default: 0
       items:
         - label: '---'
@@ -53,32 +52,32 @@ fields:
     fields:
     - identifier: k_first_name
       type: Text
-      max: 20
+      size: 20
       label: Vorname
     - identifier: k_last_name
       type: Text
-      max: 20
+      size: 20
       label: Nachname
     - type: Linebreak
     - identifier: k_address
       type:  Textarea
       label: Adresse
-      max: 30
+      size: 30
       rows: 5
     - type: Linebreak
     - identifier: k_phone
       type: Text
       label: Phone
-      max: 20
+      size: 20
     - identifier: k_mobile
       type: Text
       label: Handy
-      max: 20
+      size: 20
     - type: Linebreak
     - identifier: k_email
       type: Text
       label: E-Mail
-      max: 20
+      size: 20
     - identifier: k_web
       type: Text
       label: Web
