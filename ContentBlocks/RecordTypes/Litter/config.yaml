@@ -1,0 +1,123 @@
+name: conpassione/litter
+typeName: conpassione-litter
+title: 'Litter'
+group: csbp
+table: tx_cpkm_domain_model_litter
+languageAware: false
+labelField:
+  - l_date
+  - l_name
+sortField:
+  - identifier: l_date
+    order: asc
+security:
+  ignorePageTypeRestriction: true
+prefixFields: false
+fields:
+  - identifier: p_litter
+    type: Palette
+    fields:
+      - identifier: l_kennel
+        type: Select
+        renderType: selectSingle
+        foreign_table: tx_cpkm_domain_model_kennel
+        foreign_table_where: 'ORDER BY tx_cpkm_domain_model_kennel.k_name'
+        items:
+          - label: '---'
+            value: 0
+        minitems: 0
+        maxitems: 1
+      - identifier: l_name
+        type: Text
+        required: true
+        size: 30
+      - identifier: l_date
+        type: DateTime
+        format: date
+      - type: Linebreak
+      - identifier: l_status
+        type: Select
+        renderType: selectSingle
+        default: 0
+        items:
+          - label: '---'
+            value: 0
+          - label: 'Deckmeldung'
+            value: 1
+          - label: 'Wurfmeldung'
+            value: 2
+          - label: 'leer geblieben'
+            value: 3
+        minitems: 0
+        maxitems: 1
+  - identifier: p_litterparents
+    type: Palette
+    fields:
+      - identifier: l_father
+        type: Select
+        renderType: selectSingle
+        items:
+          - label: '---'
+            value: 0
+        foreign_table: tx_cpkm_domain_model_pedigree
+        foreign_table_where: 'AND tx_cpkm_domain_model_pedigree.p_sex=1 ORDER BY tx_cpkm_domain_model_pedigree.p_name'
+        minitems: 0
+        maxitems: 1
+        default: 0
+      - identifier: l_mother
+        type: Select
+        renderType: selectSingle
+        items:
+          - label: '---'
+            value: 0
+        foreign_table: tx_cpkm_domain_model_pedigree
+        foreign_table_where: 'AND tx_cpkm_domain_model_pedigree.p_sex=0 ORDER BY tx_cpkm_domain_model_pedigree.p_name'
+        minitems: 0
+        maxitems: 1
+        default: 0
+
+  - identifier: p_puppies
+    type: Palette
+    fields:
+      - identifier: l_females
+        type: Number
+        format: integer
+        default: 0
+        range:
+          lower: 0
+          upper: 10
+      - identifier: l_males
+        type: Number
+        format: integer
+        default: 0
+        range:
+          lower: 0
+          upper: 10
+  - identifier: infotab
+    type: Tab
+  - identifier: p_img
+    type: Palette
+    fields:
+      - identifier: l_images
+        type: File
+        extendedPalette: true
+        minitems: 0
+        maxitems: 4
+        allowed: common-image-types
+        cropVariants:
+          litter:
+            title: Pedigree
+            allowedAspectRatios:
+              portrait:
+                title: Portrait
+                value: 3 / 4
+              landscape:
+                title: Landscape
+                value: 4 / 3
+      - type: Linebreak
+      - identifier: l_comment
+        type: Textarea
+        rows: 5
+        enableRichtext: true
+        richtextConfiguration: cpdefault
+

@@ -1,0 +1,181 @@
+name: conpassione/pedigree
+typeName: conpassione-pedigree
+title: 'Pedigree'
+group: csbp
+table: tx_cpkm_domain_model_pedigree
+languageAware: false
+labelField:
+  - p_name
+  - p_birth_date
+  - p_sex
+sortField:
+  - identifier: p_name
+    order: asc
+security:
+  ignorePageTypeRestriction: true
+prefixFields: false
+fields:
+  - identifier: p_dog
+    type: Palette
+    fields:
+      - identifier: p_name
+        type: Text
+        required: true
+        size: 30
+      - identifier: p_kennel
+        type: Select
+        renderType: selectSingle
+        foreign_table: tx_cpkm_domain_model_kennel
+        foreign_table_where: 'ORDER BY tx_cpkm_domain_model_kennel.k_name'
+        items:
+          - label: '---'
+            value: 0
+        minitems: 0
+        maxitems: 1
+      - identifier: p_birth_date
+        type: DateTime
+        format: date
+      - type: Linebreak
+      - identifier: p_sex
+        type: Select
+        renderType: selectSingle
+        default: 0
+        items:
+          - label: 'Female'
+            value: 0
+          - label: 'Male'
+            value: 1
+        minitems: 0
+        maxitems: 1
+      - identifier: p_variety
+        type: Select
+        renderType: selectSingle
+        default: 0
+        items:
+          - label: '---'
+            value: 0
+          - label: 'Museau Normal'
+            value: 1
+          - label: 'Face Rase'
+            value: 2
+        minitems: 0
+        maxitems: 1
+      - type: Linebreak
+      - identifier: p_status
+        type: Select
+        renderType: selectSingle
+        default: 0
+        items:
+          - label: '---'
+            value: 0
+          - label: 'angekört'
+            value: 1
+          - label: 'aktiv'
+            value: 2
+          - label: 'inaktiv'
+            value: 3
+        minitems: 0
+        maxitems: 1
+      - identifier: p_color
+        type: Text
+        size: 20
+      - identifier: p_size
+        type: Number
+        format: decimal
+        default: 0
+        range:
+          lower: 0
+          upper: 70
+      - identifier: p_chip_number
+        type: Text
+        size: 20
+      - identifier: p_shsb_number
+        type: Text
+        size: 10
+
+  - identifier: p_parents
+    type: Palette
+    fields:
+      - identifier: p_father
+        type: Select
+        renderType: selectSingle
+        items:
+          - label: '---'
+            value: 0
+        foreign_table: tx_cpkm_domain_model_pedigree
+        foreign_table_where: 'AND tx_cpkm_domain_model_pedigree.uid <> ###THIS_UID### AND tx_cpkm_domain_model_pedigree.p_sex=1 ORDER BY tx_cpkm_domain_model_pedigree.p_name'
+        minitems: 0
+        maxitems: 1
+        default: 0
+      - identifier: p_mother
+        type: Select
+        renderType: selectSingle
+        items:
+          - label: '---'
+            value: 0
+        foreign_table: tx_cpkm_domain_model_pedigree
+        foreign_table_where: 'AND tx_cpkm_domain_model_pedigree.uid <> ###THIS_UID### AND tx_cpkm_domain_model_pedigree.p_sex=0 ORDER BY tx_cpkm_domain_model_pedigree.p_name'
+        minitems: 0
+        maxitems: 1
+        default: 0
+
+  - identifier: ownertab
+    type: Tab
+  - identifier: p_owner
+    type: Palette
+    fields:
+      - identifier: p_first_name
+        type: Text
+        size: 20
+      - identifier: p_last_name
+        type: Text
+        size: 20
+      - type: Linebreak
+      - identifier: p_address
+        type:  Textarea
+        size: 30
+        rows: 5
+      - type: Linebreak
+      - identifier: p_phone
+        type: Text
+        size: 20
+      - identifier: p_mobile
+        type: Text
+        size: 20
+      - type: Linebreak
+      - identifier: p_email
+        type: Text
+        size: 20
+      - identifier: p_web
+        type: Text
+        size: 20
+
+  - identifier: infotab
+    type: Tab
+  - identifier: p_attachements
+    type: Palette
+    fields:
+      - identifier: p_images
+        type: File
+        extendedPalette: true
+        minitems: 0
+        maxitems: 3
+        allowed: common-image-types
+        cropVariants:
+          pedigree:
+            title: Pedigree
+            allowedAspectRatios:
+              portrait:
+                title: Portrait
+                value: 3 / 4
+              landscape:
+                title: Landscape
+                value: 4 / 3
+      - type: Linebreak
+      - identifier: p_result_doc
+        type: File
+        allowed: 'doc,pdf'
+        minitems: 0
+        maxitems: 1
+        relationship: oneToMany
+        extendedPalette: false
