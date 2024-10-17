@@ -5,7 +5,7 @@ use TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider;
 use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
 
 return [
-    'tx-conpassione-kennellist' => [
+    'tx-conpassione-kennel' => [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:cpkm/Resources/Public/Icons/Kennel.svg',
     ],
@@ -13,6 +13,11 @@ return [
     'tx-conpassione-pedigree' => [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:cpkm/Resources/Public/Icons/Pedigree.svg',
+    ],
+
+    'tx-conpassione-litter' => [
+        'provider' => SvgIconProvider::class,
+        'source' => 'EXT:cpkm/Resources/Public/Icons/Litter.svg',
     ],
 
 /*    'tx-myext-bitmapicon' => [

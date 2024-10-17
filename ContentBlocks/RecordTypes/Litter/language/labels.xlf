@@ -1,10 +1,52 @@
 <?xml version="1.0"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-10-15T09:53:33+00:00" product-name="conpassione/kennel">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2024-10-17T14:13:37+00:00" product-name="conpassione/litter">
 		<header/>
 		<body>
 			<trans-unit id="title" resname="title">
 				<source>Litter</source>
+			</trans-unit>
+			<trans-unit id="l_kennel.label" resname="l_kennel.label">
+				<source>Kennel</source>
+			</trans-unit>
+			<trans-unit id="l_name.label" resname="l_name.label">
+				<source>Litter</source>
+			</trans-unit>
+			<trans-unit id="l_date.label" resname="l_date.label">
+				<source>Day of Birth</source>
+			</trans-unit>
+			<trans-unit id="l_status.label" resname="l_status.label">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="l_status.items.1.label" resname="l_status.items.1.label">
+				<source>Mating report</source>
+			</trans-unit>
+			<trans-unit id="l_status.items.2.label" resname="l_status.items.2.label">
+				<source>Litter report</source>
+			</trans-unit>
+			<trans-unit id="l_status.items.3.label" resname="l_status.items.3.label">
+				<source>not pregnant</source>
+			</trans-unit>
+			<trans-unit id="l_father.label" resname="l_father.label">
+				<source>Father</source>
+			</trans-unit>
+			<trans-unit id="l_mother.label" resname="l_mother.label">
+				<source>Mother</source>
+			</trans-unit>
+			<trans-unit id="l_females.label" resname="l_females.label">
+				<source>Females</source>
+			</trans-unit>
+			<trans-unit id="l_males.label" resname="l_males.label">
+				<source>Males</source>
+			</trans-unit>
+			<trans-unit id="tabs.infotab" resname="tabs.infotab">
+				<source>Infos</source>
+			</trans-unit>
+			<trans-unit id="l_images.label" resname="l_images.label">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="l_comment.label" resname="l_comment.label">
+				<source>Comment</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -1,10 +1,94 @@
 <?xml version="1.0"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-10-15T09:53:33+00:00" product-name="conpassione/kennel">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2024-10-17T14:13:37+00:00" product-name="conpassione/pedigree">
 		<header/>
 		<body>
 			<trans-unit id="title" resname="title">
 				<source>Pedigree</source>
+			</trans-unit>
+			<trans-unit id="p_name.label" resname="p_name.label">
+				<source>Dogs Name</source>
+			</trans-unit>
+			<trans-unit id="p_kennel.label" resname="p_kennel.label">
+				<source>Breeder</source>
+			</trans-unit>
+			<trans-unit id="p_birth_date.label" resname="p_birth_date.label">
+				<source>Date of Birth</source>
+			</trans-unit>
+			<trans-unit id="p_sex.label" resname="p_sex.label">
+				<source>Sex</source>
+			</trans-unit>
+			<trans-unit id="p_sex.items.0.label" resname="p_sex.items.0.label">
+				<source>Female</source>
+			</trans-unit>
+			<trans-unit id="p_sex.items.1.label" resname="p_sex.items.1.label">
+				<source>Male</source>
+			</trans-unit>
+			<trans-unit id="p_variety.label" resname="p_variety.label">
+				<source>Variety</source>
+			</trans-unit>
+			<trans-unit id="p_status.label" resname="p_status.label">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="p_status.items.1.label" resname="p_status.items.1.label">
+				<source>with a license</source>
+			</trans-unit>
+			<trans-unit id="p_status.items.2.label" resname="p_status.items.2.label">
+				<source>aktive</source>
+			</trans-unit>
+			<trans-unit id="p_status.items.3.label" resname="p_status.items.3.label">
+				<source>inaktive</source>
+			</trans-unit>
+			<trans-unit id="p_color.label" resname="p_color.label">
+				<source>Coat Color</source>
+			</trans-unit>
+			<trans-unit id="p_size.label" resname="p_size.label">
+				<source>Height</source>
+			</trans-unit>
+			<trans-unit id="p_chip_number.label" resname="p_chip_number.label">
+				<source>No. chip</source>
+			</trans-unit>
+			<trans-unit id="p_shsb_number.label" resname="p_shsb_number.label">
+				<source>No. SHSB</source>
+			</trans-unit>
+			<trans-unit id="p_father.label" resname="p_father.label">
+				<source>Father</source>
+			</trans-unit>
+			<trans-unit id="p_mother.label" resname="p_mother.label">
+				<source>Mother</source>
+			</trans-unit>
+			<trans-unit id="tabs.ownertab" resname="tabs.ownertab">
+				<source>Owner</source>
+			</trans-unit>
+			<trans-unit id="p_first_name.label" resname="p_first_name.label">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="p_last_name.label" resname="p_last_name.label">
+				<source>Last Name</source>
+			</trans-unit>
+			<trans-unit id="p_address.label" resname="p_address.label">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="p_phone.label" resname="p_phone.label">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="p_mobile.label" resname="p_mobile.label">
+				<source>Mobile</source>
+			</trans-unit>
+			<trans-unit id="p_email.label" resname="p_email.label">
+				<source>eMail</source>
+			</trans-unit>
+			<trans-unit id="p_web.label" resname="p_web.label">
+				<source>Website</source>
+			</trans-unit>
+			<trans-unit id="tabs.infotab" resname="tabs.infotab">
+				<source>Docs and images</source>
+			</trans-unit>
+			<trans-unit id="p_images.label" resname="p_images.label">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="p_result_doc.label" resname="p_result_doc.label">
+				<source>Docs</source>
 			</trans-unit>
 		</body>
 	</file>

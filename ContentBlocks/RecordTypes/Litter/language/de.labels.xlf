@@ -7,6 +7,62 @@
 				<source>Litter</source>
 				<target>Wurf</target>
 			</trans-unit>
+			<trans-unit id="l_kennel.label" resname="l_kennel.label">
+				<source>Kennel</source>
+				<target>Zuchtstätte</target>
+			</trans-unit>
+			<trans-unit id="l_name.label" resname="l_name.label">
+				<source>Litter</source>
+				<target>Wurf</target>
+			</trans-unit>
+			<trans-unit id="l_date.label" resname="l_date.label">
+				<source>Day of Birth</source>
+				<target>Tag der Geburt</target>
+			</trans-unit>
+			<trans-unit id="l_status.label" resname="l_status.label">
+				<source>Status</source>
+				<target>Status</target>
+			</trans-unit>
+			<trans-unit id="l_status.items.1.label" resname="l_status.items.1.label">
+				<source>Mating report</source>
+				<target>Deckmeldung</target>
+			</trans-unit>
+			<trans-unit id="l_status.items.2.label" resname="l_status.items.2.label">
+				<source>Litter report</source>
+				<target>Wurfmeldung</target>
+			</trans-unit>
+			<trans-unit id="l_status.items.3.label" resname="l_status.items.3.label">
+				<source>not pregnant</source>
+				<target>nicht schwanger</target>
+			</trans-unit>
+			<trans-unit id="l_father.label" resname="l_father.label">
+				<source>Father</source>
+				<target>Vater</target>
+			</trans-unit>
+			<trans-unit id="l_mother.label" resname="l_mother.label">
+				<source>Mother</source>
+				<target>Mutter</target>
+			</trans-unit>
+			<trans-unit id="l_females.label" resname="l_females.label">
+				<source>Females</source>
+				<target>Hündinnen</target>
+			</trans-unit>
+			<trans-unit id="l_males.label" resname="l_males.label">
+				<source>Males</source>
+				<target>Rüden</target>
+			</trans-unit>
+			<trans-unit id="tabs.infotab" resname="tabs.infotab">
+				<source>Infos</source>
+				<target>Infos</target>
+			</trans-unit>
+			<trans-unit id="l_images.label" resname="l_images.label">
+				<source>Images</source>
+				<target>Bilder</target>
+			</trans-unit>
+			<trans-unit id="l_comment.label" resname="l_comment.label">
+				<source>Comment</source>
+				<target>Kommentar</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

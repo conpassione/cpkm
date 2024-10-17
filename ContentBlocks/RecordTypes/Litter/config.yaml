@@ -7,6 +7,8 @@ languageAware: false
 labelField:
   - l_date
   - l_name
+  - l_kennel
+  - l_status
 sortField:
   - identifier: l_date
     order: asc

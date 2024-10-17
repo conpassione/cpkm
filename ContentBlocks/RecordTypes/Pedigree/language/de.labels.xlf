@@ -7,6 +7,118 @@
 				<source>Pedigree</source>
 				<target>Stammbaum</target>
 			</trans-unit>
+			<trans-unit id="p_name.label" resname="p_name.label">
+				<source>Dogs Name</source>
+				<target>Name des Hundes</target>
+			</trans-unit>
+			<trans-unit id="p_kennel.label" resname="p_kennel.label">
+				<source>Breeder</source>
+				<target>Züchter</target>
+			</trans-unit>
+			<trans-unit id="p_birth_date.label" resname="p_birth_date.label">
+				<source>Date of Birth</source>
+				<target>Geburtstag</target>
+			</trans-unit>
+			<trans-unit id="p_sex.label" resname="p_sex.label">
+				<source>Sex</source>
+				<target>Geschlecht</target>
+			</trans-unit>
+			<trans-unit id="p_sex.items.0.label" resname="p_sex.items.0.label">
+				<source>Female</source>
+				<target>Hündin</target>
+			</trans-unit>
+			<trans-unit id="p_sex.items.1.label" resname="p_sex.items.1.label">
+				<source>Male</source>
+				<target>Rüde</target>
+			</trans-unit>
+			<trans-unit id="p_variety.label" resname="p_variety.label">
+				<source>Variety</source>
+				<target>Varietät</target>
+			</trans-unit>
+			<trans-unit id="p_status.label" resname="p_status.label">
+				<source>Status</source>
+				<target>Status</target>
+			</trans-unit>
+			<trans-unit id="p_status.items.1.label" resname="p_status.items.1.label">
+				<source>with a license</source>
+				<target>angekört</target>
+			</trans-unit>
+			<trans-unit id="p_status.items.2.label" resname="p_status.items.2.label">
+				<source>aktive</source>
+				<target>aktiv</target>
+			</trans-unit>
+			<trans-unit id="p_status.items.3.label" resname="p_status.items.3.label">
+				<source>inaktive</source>
+				<target>inaktiv</target>
+			</trans-unit>
+			<trans-unit id="p_color.label" resname="p_color.label">
+				<source>Coat Color</source>
+				<target>Stammbaum</target>
+			</trans-unit>
+			<trans-unit id="p_size.label" resname="p_size.label">
+				<source>Height</source>
+				<target>Risthöhe</target>
+			</trans-unit>
+			<trans-unit id="p_chip_number.label" resname="p_chip_number.label">
+				<source>No. chip</source>
+				<target>Chip-Nummer</target>
+			</trans-unit>
+			<trans-unit id="p_shsb_number.label" resname="p_shsb_number.label">
+				<source>No. SHSB</source>
+				<target>SHSB-Nummer</target>
+			</trans-unit>
+			<trans-unit id="p_father.label" resname="p_father.label">
+				<source>Father</source>
+				<target>Vater</target>
+			</trans-unit>
+			<trans-unit id="p_mother.label" resname="p_mother.label">
+				<source>Mother</source>
+				<target>Mutter</target>
+			</trans-unit>
+			<trans-unit id="tabs.ownertab" resname="tabs.ownertab">
+				<source>Owner</source>
+				<target>Besitzer</target>
+			</trans-unit>
+			<trans-unit id="p_first_name.label" resname="p_first_name.label">
+				<source>First Name</source>
+				<target>Vorname</target>
+			</trans-unit>
+			<trans-unit id="p_last_name.label" resname="p_last_name.label">
+				<source>Last Name</source>
+				<target>Nachname</target>
+			</trans-unit>
+			<trans-unit id="p_address.label" resname="p_address.label">
+				<source>Address</source>
+				<target>Adresse</target>
+			</trans-unit>
+			<trans-unit id="p_phone.label" resname="p_phone.label">
+				<source>Phone</source>
+				<target>Telefon</target>
+			</trans-unit>
+			<trans-unit id="p_mobile.label" resname="p_mobile.label">
+				<source>Mobile</source>
+				<target>Handy</target>
+			</trans-unit>
+			<trans-unit id="p_email.label" resname="p_email.label">
+				<source>eMail</source>
+				<target>E-Mail</target>
+			</trans-unit>
+			<trans-unit id="p_web.label" resname="p_web.label">
+				<source>Website</source>
+				<target>Webseite</target>
+			</trans-unit>
+			<trans-unit id="tabs.infotab" resname="tabs.infotab">
+				<source>Docs and images</source>
+				<target>Dokumente und Bilder</target>
+			</trans-unit>
+			<trans-unit id="p_images.label" resname="p_images.label">
+				<source>Images</source>
+				<target>Bilder</target>
+			</trans-unit>
+			<trans-unit id="p_result_doc.label" resname="p_result_doc.label">
+				<source>Docs</source>
+				<target>Dokumente</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

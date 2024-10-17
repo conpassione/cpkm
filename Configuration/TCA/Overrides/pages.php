@@ -12,18 +12,26 @@ call_user_func(static function(): void {
 
     // zusätzliche Icons für Folder-Seiten
     $GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] = [
-        'label' => 'Kennels',
-        'icon' => 'tx-conpassione-kennellist',
-        'value' => 'kennellist'
+        'label' => 'LLL:EXT:cpkm/Resources/Private/Language/locallang_db.xlf:pages.label.kennel',
+        'icon' => 'tx-conpassione-kennel',
+        'value' => 'kennel'
     ];
-
-    $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-kennellist'] = 'tx-conpassione-kennellist';
+    $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-kennel'] = 'tx-conpassione-kennel';
 
     // zusätzliche Icons für Folder-Seiten
     $GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] = [
-        'label' => 'Pedigree',
+        'label' => 'LLL:EXT:cpkm/Resources/Private/Language/locallang_db.xlf:pages.label.pedigree',
         'icon' => 'tx-conpassione-pedigree',
         'value' => 'pedigree'
     ];
     $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-pedigree'] = 'tx-conpassione-pedigree';
+
+    // zusätzliche Icons für Folder-Seiten
+    $GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] = [
+        'label' => 'LLL:EXT:cpkm/Resources/Private/Language/locallang_db.xlf:pages.label.litter',
+        'icon' => 'tx-conpassione-litter',
+        'value' => 'litter'
+    ];
+    $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-litter'] = 'tx-conpassione-litter';
+
 });

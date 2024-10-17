@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" original="labels.xlf" datatype="plaintext" product-name="conpassione/kennel" date="2024-10-17T17:05:35+02:00">
+		<header></header>
+		<body>
+			<trans-unit id="extname" resname="extname">
+				<source>Kennel Management</source>
+			</trans-unit>
+			<trans-unit id="pages.label.kennel" resname="pages.label.kennel">
+				<source>Kennel</source>
+			</trans-unit>
+			<trans-unit id="pages.label.litter" resname="pages.label.litter">
+				<source>Litter</source>
+			</trans-unit>
+			<trans-unit id="pages.label.pedigree" resname="pages.label.pedigree">
+				<source>Pedigree</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

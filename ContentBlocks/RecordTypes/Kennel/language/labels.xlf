@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-10-15T09:53:33+00:00" product-name="conpassione/kennel">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2024-10-17T14:13:37+00:00" product-name="conpassione/kennel">
 		<header/>
 		<body>
 			<trans-unit id="title" resname="title">
@@ -37,7 +37,7 @@
 				<source>Breeders address</source>
 			</trans-unit>
 			<trans-unit id="k_first_name.label" resname="k_first_name.label">
-				<source>Name</source>
+				<source>First Name</source>
 			</trans-unit>
 			<trans-unit id="k_last_name.label" resname="k_last_name.label">
 				<source>Last name</source>

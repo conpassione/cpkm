@@ -9,7 +9,7 @@ call_user_func(static function(): void {
         'tt_content',
         'CType',
         'kennel',
-        'Wurfverwaltung',
+        'LLL:EXT:cpkm/Resources/Private/Language/locallang_db.xlf:extname',
         'before:default'
     );
 });

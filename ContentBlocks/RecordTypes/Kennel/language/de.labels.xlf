@@ -48,7 +48,7 @@
 				<target>Adresse des Züchters</target>
 			</trans-unit>
 			<trans-unit id="k_first_name.label" resname="k_first_name.label">
-				<source>Name</source>
+				<source>First Name</source>
 				<target>Vorname</target>
 			</trans-unit>
 			<trans-unit id="k_last_name.label" resname="k_last_name.label">
