@@ -33,7 +33,7 @@
 			</trans-unit>
 			<trans-unit id="l_status.items.3.label" resname="l_status.items.3.label">
 				<source>not pregnant</source>
-				<target>nicht schwanger</target>
+				<target>nicht trächtig</target>
 			</trans-unit>
 			<trans-unit id="l_father.label" resname="l_father.label">
 				<source>Father</source>

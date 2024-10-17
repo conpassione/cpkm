@@ -11,7 +11,7 @@ labelField:
   - l_status
 sortField:
   - identifier: l_date
-    order: asc
+    order: desc
 security:
   ignorePageTypeRestriction: true
 prefixFields: false
