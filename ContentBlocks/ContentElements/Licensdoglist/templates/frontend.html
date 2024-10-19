@@ -1,0 +1,15 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/Friendsoftypo3/ContentBlocks/ViewHelpers">
+
+<f:asset.css identifier="cpmember-css" href="{cb:assetPath()}/frontend.css" />
+<f:asset.script identifier="cpmember-js" file="{cb:assetPath()}frontend.js"/>
+
+<f:debug inline="true">{_all}</f:debug>
+<div class="cpmemberlist">
+    <h{data.header_layout}>{data.header}</h{data.header_layout}>
+    <f:for as="dog" each="{licdogs}">
+        <h3>Hund: {dog.data.p_name}</h3>
+
+    </f:for>
+</div>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="Labels.xlf" date="2024-05-01T12:29:50+00:00" product-name="conpassione/homepage">
+        <header/>
+        <body>
+			<trans-unit id="title" resname="title">
+				<source>Memberlist</source>
+				<target>Mitgliederliste</target>
+			</trans-unit>
+			<trans-unit id="description" resname="description">
+				<source>List of Board-members</source>
+				<target>Liste header Mitglieder</target>
+			</trans-unit>
+			<trans-unit id="board.items.label" resname="board.items.label">
+				<source>Comitee</source>
+				<target>Vorstand</target>
+			</trans-unit>
+			<trans-unit id="board.items.1.label" resname="board.items.1.label">
+				<source>Comitee</source>
+				<target>Vorstand</target>
+			</trans-unit>
+			<trans-unit id="board.items.2.label" resname="board.items.2.label">
+				<source>Breeding comission</source>
+				<target>Zuchtkommission</target>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

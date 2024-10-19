@@ -53,7 +53,7 @@
 			</trans-unit>
 			<trans-unit id="p_color.label" resname="p_color.label">
 				<source>Coat Color</source>
-				<target>Stammbaum</target>
+				<target>Fellfarbe</target>
 			</trans-unit>
 			<trans-unit id="p_size.label" resname="p_size.label">
 				<source>Height</source>

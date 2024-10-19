@@ -1,0 +1,2 @@
+# Setup Frontend Output
+@import 'EXT:cpkm/Configuration/TypoScript/Setup/*.typoscript'

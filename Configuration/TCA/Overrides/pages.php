@@ -33,5 +33,4 @@ call_user_func(static function(): void {
         'value' => 'litter'
     ];
     $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-litter'] = 'tx-conpassione-litter';
-
 });

@@ -1,0 +1,28 @@
+tt_content.licensdoglist {
+  dataProcessing {
+    200 = database-query
+    200 {
+      table = tx_cpkm_domain_model_pedigree
+      orderBy = p_name
+      pidInList.data = field : l_page
+      where =  ((p_status = 1) OR (p_status = 2))
+      as = licdogs
+      dataProcessing.10 = files
+      dataProcessing.10 {
+        references.table = tx_cpkm_domain_model_pedigree
+        references.fieldName = p_images
+        sorting = title
+        sorting.dirction = ascending
+        as = images
+      }
+      dataProcessing.20 = files
+      dataProcessing.20 {
+        references.table = tx_cpkm_domain_model_pedigree
+        references.fieldName = p_result_doc
+        sorting = title
+        sorting.dirction = ascending
+        as = resultdocs
+      }
+    }
+  }
+}
