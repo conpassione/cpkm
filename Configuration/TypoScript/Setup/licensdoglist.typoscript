@@ -5,7 +5,7 @@ tt_content.licensdoglist {
       table = tx_cpkm_domain_model_pedigree
       orderBy = p_name
       pidInList.data = field : l_page
-      where =  ((p_status = 1) OR (p_status = 2)) AND (p_sex = 1)
+      where =  (p_status = 2) AND (p_sex = 1)
       as = licdogs
       dataProcessing.10 = files
       dataProcessing.10 {

@@ -7,7 +7,7 @@
 				<source>Licensed Dog List</source>
 			</trans-unit>
 			<trans-unit id="description" resname="description">
-				<source>List of Board-members</source>
+				<source>List of active licensed Dogs</source>
 			</trans-unit>
 			<trans-unit id="header.label" resname="header.label">
 				<source>List Title</source>

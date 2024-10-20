@@ -5,11 +5,11 @@
         <body>
 			<trans-unit id="title" resname="title">
 				<source>Licensed Dog List</source>
-				<target>Liste angekörter Rüden</target>
+				<target>Zuchtrüden</target>
 			</trans-unit>
 			<trans-unit id="description" resname="description">
-				<source>List of Board-members</source>
-				<target>Liste header Mitglieder</target>
+				<source>List of active licensed Dogs</source>
+				<target>List der aktiven Zuchtrüden</target>
 			</trans-unit>
 			<trans-unit id="header.label" resname="header.label">
 				<source>List Title</source>
