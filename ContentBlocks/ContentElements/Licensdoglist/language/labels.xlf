@@ -4,19 +4,13 @@
 		<header/>
 		<body>
 			<trans-unit id="title" resname="title">
-				<source>Memberlist</source>
+				<source>Licensed Dog List</source>
 			</trans-unit>
 			<trans-unit id="description" resname="description">
 				<source>List of Board-members</source>
 			</trans-unit>
-			<trans-unit id="board.items.label" resname="board.items.label">
-				<source>Comitee</source>
-			</trans-unit>
-			<trans-unit id="board.items.1.label" resname="board.items.1.label">
-				<source>Comitee</source>
-			</trans-unit>
-			<trans-unit id="board.items.2.label" resname="board.items.2.label">
-				<source>Breeding comission</source>
+			<trans-unit id="header.label" resname="header.label">
+				<source>List Title</source>
 			</trans-unit>
 		</body>
 	</file>
