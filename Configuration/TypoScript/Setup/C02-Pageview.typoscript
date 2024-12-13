@@ -1,0 +1,7 @@
+# page.10 = PAGEVIEW
+page.10 {
+  # Pfad zu den Fluid-Templates, kann überschrieben werden von anderer Extension
+  paths {
+    20 = EXT:cpkm/Resources/Private/Templates/
+  }
+}

@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="de" datatype="plaintext" original="Labels.xlf" date="2024-05-01T12:29:50+00:00" product-name="conpassione/homepage">
-        <header/>
-        <body>
-			<trans-unit id="title" resname="title">
-				<source>Licensed Dog List</source>
-				<target>Zuchtrüden</target>
-			</trans-unit>
+	<file source-language="en" target-language="de" original="Labels.xlf" datatype="plaintext" product-name="conpassione/homepage" date="2024-12-03T23:27:28+01:00">
+		<header></header>
+		<body>
 			<trans-unit id="description" resname="description">
 				<source>List of active licensed Dogs</source>
 				<target>List der aktiven Zuchtrüden</target>
@@ -15,6 +11,14 @@
 				<source>List Title</source>
 				<target>Listentitel</target>
 			</trans-unit>
-        </body>
-    </file>
+			<trans-unit id="l_page.label" resname="l_page.label">
+				<source>Dogs from page</source>
+				<target>Hunde von Seite</target>
+			</trans-unit>
+			<trans-unit id="title" resname="title">
+				<source>Licensed Dog List</source>
+				<target>Zuchtrüden</target>
+			</trans-unit>
+		</body>
+	</file>
 </xliff>

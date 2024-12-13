@@ -2,6 +2,7 @@ name: conpassione/licensdoglist
 typeName: licensdoglist
 group: kennel
 prefixFields: false
+
 fields:
   - identifier: conpassione/Header
     type: Basic

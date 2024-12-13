@@ -8,6 +8,7 @@ labelField:
   - p_name
   - p_birth_date
   - p_sex
+  - p_status
   - p_kennel
 sortField:
   - identifier: p_name

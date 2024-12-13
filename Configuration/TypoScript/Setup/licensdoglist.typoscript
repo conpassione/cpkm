@@ -1,27 +1,39 @@
+
+
 tt_content.licensdoglist {
   dataProcessing {
     200 = database-query
     200 {
       table = tx_cpkm_domain_model_pedigree
-      orderBy = p_name
+      orderBy = p_variety, p_name
       pidInList.data = field : l_page
-      where =  (p_status = 2) AND (p_sex = 1)
+      #where = '({#tx_cpkm_domain_model_pedigree}.{#pid} = ###REC_FIELD_l_page###) AND ({#tx_cpkm_domain_model_pedigree}.{#p_status} = 2) AND ({#tx_cpkm_domain_model_pedigree}.{#p_sex} = 1)'
+      where = (p_status = 2) AND (p_sex = 1)
       as = licdogs
-      dataProcessing.10 = files
-      dataProcessing.10 {
-        references.table = tx_cpkm_domain_model_pedigree
-        references.fieldName = p_images
-        sorting = title
-        sorting.dirction = ascending
-        as = images
-      }
-      dataProcessing.20 = files
-      dataProcessing.20 {
-        references.table = tx_cpkm_domain_model_pedigree
-        references.fieldName = p_result_doc
-        sorting = title
-        sorting.dirction = ascending
-        as = resultdocs
+      dataProcessing {
+        10 = database-query
+        10 {
+          table = tx_cpkm_domain_model_kennel
+          pidInList = 0
+          uidInList.data = field : p_kennel
+          as = kennels
+        }
+        20 = files
+        20 {
+          references.table = tx_cpkm_domain_model_pedigree
+          references.fieldName = p_images
+          sorting = title
+          sorting.dirction = ascending
+          as = images
+        }
+        30 = files
+        30 {
+          references.table = tx_cpkm_domain_model_pedigree
+          references.fieldName = p_result_doc
+          sorting = title
+          sorting.dirction = ascending
+          as = resultdocs
+        }
       }
     }
   }

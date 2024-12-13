@@ -2,14 +2,33 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:cb="http://typo3.org/ns/Friendsoftypo3/ContentBlocks/ViewHelpers">
 
-<f:asset.css identifier="cpmember-css" href="{cb:assetPath()}/frontend.css" />
-<f:asset.script identifier="cpmember-js" file="{cb:assetPath()}frontend.js"/>
+<f:asset.css identifier="cplicdogs" href="{cb:assetPath()}/frontend.css" />
 
-<f:debug inline="true">{_all}</f:debug>
-<div class="cpmemberlist">
-    <h{data.header_layout}>{data.header}</h{data.header_layout}>
-    <f:for as="dog" each="{licdogs}">
-        <h3>Hund: {dog.data.p_name}</h3>
-
-    </f:for>
+<f:debug>{_all}</f:debug>
+<div class="cplicdogslist">
+    <f:if condition="{data.header}">
+        <f:cObject
+            typoscriptObjectPath="tt_content.header"
+            data="{data}"
+            table="tt_content"
+        />
+    </f:if>
+    <div class="licdogs">
+        <f:if condition="{licdogs}">
+            <f:then>
+                <f:variable name="variety">{licdogs.0.data.p_variety}</f:variable>
+                <f:for as="dog" each="{licdogs}" iteration="i-licdogs">
+                    <f:if condition="({variety} == {dog.data.p_variety}) && ({i-licdogs.index} == 0) "><h3 class="h3 licdogs--devider">Museau Normale</h3></f:if>
+                    <f:if condition="({variety} == {dog.data.p_variety}) && ({i-licdogs.index} > 0) "></f:if>
+                    <f:if condition="({variety} != {dog.data.p_variety})"><h3 class="h3 licdogs--devider">Face Rase</h3><f:variable name="variety">{dog.data.p_variety}</f:variable></f:if>
+                    <div class="licdogscard">
+                        <h3 class="licdogscard--header h3-font">{dog.data.p_name}</h3>
+                    </div>
+                </f:for>
+            </f:then>
+            <f:else>
+                <p>---</p>
+            </f:else>
+        </f:if>
+    </div>
 </div>

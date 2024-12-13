@@ -3,6 +3,5 @@ label: conPassione Kennel Management
 dependencies:
   - conpassione/cpdevsite
   - typo3/form
-  - typo3/fluid-styled-content
   - typo3/redirects
   - typo3/seo-sitemap

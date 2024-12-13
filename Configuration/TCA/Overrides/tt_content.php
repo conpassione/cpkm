@@ -13,5 +13,3 @@ call_user_func(static function(): void {
         'before:default'
     );
 });
-
-// 'LLL:EXT:cpkm/Resources/Private/Language/locallang_db.xlf:contentwizard.kennel.groupLabel',
