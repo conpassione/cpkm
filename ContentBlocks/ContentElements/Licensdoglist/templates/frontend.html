@@ -4,7 +4,6 @@
 
 <f:asset.css identifier="cplicdogs" href="{cb:assetPath()}/frontend.css" />
 
-<f:debug>{_all}</f:debug>
 <div class="cplicdogslist">
     <f:if condition="{data.header}">
         <f:cObject
@@ -20,9 +19,12 @@
                 <f:for as="dog" each="{licdogs}" iteration="i-licdogs">
                     <f:if condition="({variety} == {dog.data.p_variety}) && ({i-licdogs.index} == 0) "><h3 class="h3 licdogs--devider">Museau Normale</h3></f:if>
                     <f:if condition="({variety} == {dog.data.p_variety}) && ({i-licdogs.index} > 0) "></f:if>
-                    <f:if condition="({variety} != {dog.data.p_variety})"><h3 class="h3 licdogs--devider">Face Rase</h3><f:variable name="variety">{dog.data.p_variety}</f:variable></f:if>
-                    <div class="licdogscard">
+                    <f:if condition="({variety} != {dog.data.p_variety})"><h3 class="h3 licdogs--devider">Face Rase</h3>
+                        <f:variable name="variety">{dog.data.p_variety}</f:variable>
+                    </f:if>
+                    <div class="licdogscard" aria-label="Dogs">
                         <h3 class="licdogscard--header h3-font">{dog.data.p_name}</h3>
+                        <p>{dog.data.p_birth_date}</p>
                     </div>
                 </f:for>
             </f:then>

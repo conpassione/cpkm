@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="it" original="" datatype="plaintext" date="2024-12-03T23:27:28+01:00">
+		<body>
+			<trans-unit id="description" resname="description">
+				<source>List of active licensed Dogs</source>
+				<target>Lista dei cervi in riproduzione</target>
+			</trans-unit>
+			<trans-unit id="header.label" resname="header.label">
+				<source>List Title</source>
+				<target>Titolo della lista</target>
+			</trans-unit>
+			<trans-unit id="l_page.label" resname="l_page.label">
+				<source>Dogs from page</source>
+				<target>Cani della pagina</target>
+			</trans-unit>
+			<trans-unit id="title" resname="title">
+				<source>Licensed Dog List</source>
+				<target>Cervi in riproduzione</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

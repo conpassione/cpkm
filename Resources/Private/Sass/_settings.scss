@@ -1,5 +1,41 @@
 /* settings */
+@layer cpmk {
 
-:root {
-  --clr-brand--primary: green;
+  @font-face {
+    font-family:  'Oxygen';
+    src:          url('../Fonts/Oxygen/Oxygen-Light.woff2') format('woff2');
+    font-weight:  300;
+    font-style:   normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family:  'Oxygen';
+    src:          url('../Fonts/Oxygen/Oxygen-Bold.woff2') format('woff2');
+    font-weight:  700;
+    font-style:   normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family:  'Oxygen';
+    src:          url('../Fonts/Oxygen/Oxygen-Regular.woff2') format('woff2');
+    font-weight:  400;
+    font-style:   normal;
+    font-display: swap;
+  }
+
+  :root {
+    // --clr-brand--primary: green;
+    --card-border-radius: 1rem !important;
+
+    --ff:                 'Oxygen';
+    --ff-condensed:       'UbuntuCondensed';
+    --ff-serif:           'Oxygen';
+    --ff-h:               'Oxygen';
+    --ff-nav:             'Oxygen';
+    --ff-mono:            'UbuntuMono';
+    --ff-symbol:          'Symbols';
+  }
+
 }
