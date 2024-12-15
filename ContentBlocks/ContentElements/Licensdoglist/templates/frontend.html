@@ -4,7 +4,7 @@
 
 <f:asset.css identifier="cplicdogs" href="{cb:assetPath()}/frontend.css" />
 
-<div class="cplicdogslist">
+<div class="licdogslist">
     <f:if condition="{data.header}">
         <f:cObject
             typoscriptObjectPath="tt_content.header"
@@ -19,12 +19,45 @@
                 <f:for as="dog" each="{licdogs}" iteration="i-licdogs">
                     <f:if condition="({variety} == {dog.data.p_variety}) && ({i-licdogs.index} == 0) "><h3 class="h3 licdogs--devider">Museau Normale</h3></f:if>
                     <f:if condition="({variety} == {dog.data.p_variety}) && ({i-licdogs.index} > 0) "></f:if>
-                    <f:if condition="({variety} != {dog.data.p_variety})"><h3 class="h3 licdogs--devider">Face Rase</h3>
+                    <f:if condition="({variety} != {dog.data.p_variety})"><h3 class="h3 licdogcard--devider">Face Rase</h3>
                         <f:variable name="variety">{dog.data.p_variety}</f:variable>
                     </f:if>
-                    <div class="licdogscard" aria-label="Dogs">
-                        <h3 class="licdogscard--header h3-font">{dog.data.p_name}</h3>
-                        <p>{dog.data.p_birth_date}</p>
+                    <div class="licdogcard" id="dog{dog.data.uid}" aria-label="Dogs">
+                        <h3 class="licdogcard--header licdogcard--variety-{dog.data.p_variety} h3-font">{dog.data.p_name} {dog.kennels.0.data.k_name}</h3>
+                        <div class="licdogcard--dog">
+                            <h4><f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:licdogs.dog"/></h4>
+                            <time datetime="{dog.data.p_birth_date -> f:format.date(format: '%d.%m.%Y')}">
+                            <f:format.date format="%d. %B %Y">{dog.data.p_birth_date}</f:format.date></time><br>
+                            <f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:licdogs.dog.color"/>: {dog.data.p_color}<br>
+                            <f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:licdogs.dog.size"/>: {dog.data.p_size}<br>
+                            <f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:licdogs.dog.results"/>:<br>
+                            <f:for as="resultdoc" each="{dog.resultdocs}" iteration="idocs">
+                                <f:link.file class="file-link--icon" file="{resultdoc}" target="_blank">PDF-{idocs.cycle}</f:link.file><br>
+                            </f:for>
+                        </div>
+                        <div class="licdogcard--address">
+                            <h4><f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:licdogs.owner"/></h4>
+                            {dog.data.p_first_name} {dog.data.p_last_name}<br>
+                            {dog.data.p_address -> f:format.nl2br()}<br>
+                            <f:link.external uri="tel:{dog.data.p_mobile}" class="phone-link--icon">{dog.data.p_mobile}</f:link.external><br>
+                            <f:link.email email="{dog.data.p_email}" class="mail-link--icon">{dog.data.p_email}</f:link.email> <br>
+                            <f:link.external uri="{dog.data.p_web}" target="_blank" class="url-link--icon">{dog.data.p_web}</f:link.external><br>
+                        </div>
+                        <div class="licdogcard--breeder">
+                            <h4><f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:licdogs.breeder"/></h4>
+                            {dog.kennels.0.data.k_name}<br>
+                            {dog.kennels.0.data.k_first_name} {dog.kennels.0.data.k_last_name}<br>
+                            <f:link.external uri="{dog.kennels.0.data.k_web}" target="_blank" class="url-link--icon">{dog.kennels.0.data.k_web}</f:link.external>
+                        </div>
+                        <div class="licdogcard--images">
+                            <f:if condition="{dog.images}">
+                                <f:cObject
+                                    typoscriptObjectPath="tt_content.image"
+                                    data="{header: '', showcaption:'1', files: dog.images}"
+                                    table="tt_content"
+                                />
+                            </f:if>
+                        </div>
                     </div>
                 </f:for>
             </f:then>

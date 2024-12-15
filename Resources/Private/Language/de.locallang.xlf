@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="de" original="locallang.xlf" datatype="plaintext" product-name="conpassione/cpkm" date="2024-12-15T18:08:19+01:00">
+		<header></header>
+		<body>
+			<trans-unit id="licdogs.breeder" resname="licdogs.breeder">
+				<source>Breeder</source>
+				<target>Züchter</target>
+			</trans-unit>
+			<trans-unit id="licdogs.dog" resname="licdogs.dog">
+				<source>Dog</source>
+				<target>Hund</target>
+			</trans-unit>
+			<trans-unit id="licdogs.dog.color" resname="licdogs.dog.color">
+				<source>Color</source>
+				<target>Farbe</target>
+			</trans-unit>
+			<trans-unit id="licdogs.dog.results" resname="licdogs.dog.results">
+				<source>Result of the approval</source>
+				<target>Resultat der Ankörung</target>
+			</trans-unit>
+			<trans-unit id="licdogs.dog.size" resname="licdogs.dog.size">
+				<source>Size</source>
+				<target>Grösse</target>
+			</trans-unit>
+			<trans-unit id="licdogs.owner" resname="licdogs.owner">
+				<source>Owner</source>
+				<target>Besitzer</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

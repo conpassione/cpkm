@@ -1,6 +1,44 @@
 /* Created by Content Blocks */
 
-.cptextblock {
-  border: 1px solid red;
-  background-color: firebrick;
+.licdogslist {
+  --_clr-accent: var(--clr-brand--primary);
+  --_clr-header: var(--clr-bw-090);
+  container: licdogslist / inline-size;
+
+  .licdogs {
+    display: grid;
+    gap: var(--gutter);
+  }
+
+  .licdogcard--devider {
+    grid-column: 1 / -1;
+  }
+
+  .licdogcard {
+    display: grid;
+    gap: var(--gutter);
+    grid-template-columns: 1fr;
+    @container licdogslist (width > 480px) {
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+    border: 1px solid var(--_clr-accent);
+  }
+
+  .licdogcard > * {
+    padding: calc(var(--gutter)/2);
+  }
+
+  .licdogcard--header {
+    grid-column: 1 / -1;
+    color: var(--_clr-header);
+  }
+
+  .licdogcard--variety-1 {
+    background-color: var(--_clr-accent);
+  }
+
+  .licdogcard--variety-2 {
+    background-color: var(--_clr-accent);
+  }
+
 }
