@@ -1,59 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en" target-language="de" original="Labels.xlf" datatype="plaintext" product-name="conpassione/kennel" date="2024-12-16T12:46:13+01:00">
-		<header></header>
+	<file source-language="en" target-language="fr" original="" datatype="plaintext" date="2024-12-16T12:46:13+01:00">
 		<body>
 			<trans-unit id="l_comment.label" resname="l_comment.label">
 				<source>Comment</source>
-				<target>Kommentar</target>
+				<target>Notice</target>
 			</trans-unit>
 			<trans-unit id="l_date.label" resname="l_date.label">
 				<source>Day of Birth</source>
-				<target>Tag der Geburt</target>
+				<target>Date de la portée</target>
 			</trans-unit>
 			<trans-unit id="l_father.label" resname="l_father.label">
 				<source>Father</source>
-				<target>Vater</target>
+				<target>Père</target>
 			</trans-unit>
 			<trans-unit id="l_females.label" resname="l_females.label">
 				<source>Females</source>
-				<target>Hündinnen</target>
+				<target>Chiennes</target>
 			</trans-unit>
 			<trans-unit id="l_images.label" resname="l_images.label">
 				<source>Images</source>
-				<target>Bilder</target>
+				<target>Images</target>
 			</trans-unit>
 			<trans-unit id="l_kennel.label" resname="l_kennel.label">
 				<source>Kennel</source>
-				<target>Zuchtstätte</target>
+				<target>Èlevage</target>
 			</trans-unit>
 			<trans-unit id="l_males.label" resname="l_males.label">
 				<source>Males</source>
-				<target>Rüden</target>
+				<target>Ètalons</target>
 			</trans-unit>
 			<trans-unit id="l_mother.label" resname="l_mother.label">
 				<source>Mother</source>
-				<target>Mutter</target>
+				<target>Mère</target>
 			</trans-unit>
 			<trans-unit id="l_name.label" resname="l_name.label">
 				<source>Litter</source>
-				<target>Wurf</target>
+				<target>Portée</target>
 			</trans-unit>
 			<trans-unit id="l_status.items.1.label" resname="l_status.items.1.label">
 				<source>Mating report</source>
-				<target>Deckmeldung</target>
+				<target>Annonce de saillie</target>
 			</trans-unit>
 			<trans-unit id="l_status.items.100.label" resname="l_status.items.100.label">
 				<source>archived</source>
-				<target>archiviert</target>
+				<target>archivé</target>
 			</trans-unit>
 			<trans-unit id="l_status.items.2.label" resname="l_status.items.2.label">
 				<source>Litter report</source>
-				<target>Wurfmeldung</target>
+				<target>Avis de la mise bas</target>
 			</trans-unit>
 			<trans-unit id="l_status.items.3.label" resname="l_status.items.3.label">
 				<source>not pregnant</source>
-				<target>nicht trächtig</target>
+				<target>pas en gestation</target>
 			</trans-unit>
 			<trans-unit id="l_status.label" resname="l_status.label">
 				<source>Status</source>
@@ -61,15 +60,15 @@
 			</trans-unit>
 			<trans-unit id="l_variety.label" resname="l_variety.label">
 				<source>Variety</source>
-				<target>Varietät</target>
+				<target>Variété</target>
 			</trans-unit>
 			<trans-unit id="tabs.infotab" resname="tabs.infotab">
 				<source>Infos</source>
-				<target>Infos</target>
+				<target>Info</target>
 			</trans-unit>
 			<trans-unit id="title" resname="title">
 				<source>Litter</source>
-				<target>Wurf</target>
+				<target>Portée</target>
 			</trans-unit>
 		</body>
 	</file>

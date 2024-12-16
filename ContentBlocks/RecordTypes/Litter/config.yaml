@@ -33,6 +33,14 @@ fields:
         type: Text
         required: true
         size: 30
+      - identifier: l_variety
+        type: Radio
+        default: 1
+        items:
+          - label: 'Museau normal'
+            value: 1
+          - label: 'Face rase'
+            value: 2
       - identifier: l_date
         type: DateTime
         format: date
@@ -50,6 +58,8 @@ fields:
             value: 2
           - label: 'leer geblieben'
             value: 3
+          - label: 'archiviert'
+            value: 100
         minitems: 0
         maxitems: 1
   - identifier: p_litterparents
@@ -121,5 +131,4 @@ fields:
         type: Textarea
         rows: 5
         enableRichtext: true
-        richtextConfiguration: cpdefault
 

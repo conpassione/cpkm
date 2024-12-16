@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="it" original="Labels.xlf" datatype="plaintext" product-name="conpassione/homepage" date="2024-12-16T15:28:42+01:00">
+		<header></header>
+		<body>
+			<trans-unit id="description" resname="description">
+				<source>List of litters</source>
+				<target>Rapporti sugli stalloni e sulla cucciolata</target>
+			</trans-unit>
+			<trans-unit id="header.label" resname="header.label">
+				<source>List Title</source>
+				<target>Titolo della lista</target>
+			</trans-unit>
+			<trans-unit id="l_page.label" resname="l_page.label">
+				<source>Messages from page</source>
+				<target>Avvisi della pagina</target>
+			</trans-unit>
+			<trans-unit id="litter.breeder" resname="litter.breeder">
+				<source>Breeder</source>
+				<target>Allevatore</target>
+			</trans-unit>
+			<trans-unit id="litter.father" resname="litter.father">
+				<source>Father</source>
+				<target>Padre</target>
+			</trans-unit>
+			<trans-unit id="litter.litter" resname="litter.litter">
+				<source>Litter</source>
+				<target>Cucciolata</target>
+			</trans-unit>
+			<trans-unit id="litter.litter.from" resname="litter.litter.from">
+				<source>from</source>
+				<target>del</target>
+			</trans-unit>
+			<trans-unit id="litter.mother" resname="litter.mother">
+				<source>Mother</source>
+				<target>Madre</target>
+			</trans-unit>
+			<trans-unit id="litter.planned" resname="litter.planned">
+				<source>Planned litter date</source>
+				<target>Data prevista per la cucciolata</target>
+			</trans-unit>
+			<trans-unit id="title" resname="title">
+				<source>List of litters</source>
+				<target>Rapporti sugli stalloni e sulla cucciolata</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

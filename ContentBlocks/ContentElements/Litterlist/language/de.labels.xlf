@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="de" original="" datatype="plaintext" date="2024-12-16T15:28:42+01:00">
+		<body>
+			<trans-unit id="description" resname="description">
+				<source>List of litters</source>
+				<target>Liste der Deck- und Wurfmeldungen</target>
+			</trans-unit>
+			<trans-unit id="header.label" resname="header.label">
+				<source>List Title</source>
+				<target>Listentitel</target>
+			</trans-unit>
+			<trans-unit id="l_page.label" resname="l_page.label">
+				<source>Messages from page</source>
+				<target>Meldungen von Seite</target>
+			</trans-unit>
+			<trans-unit id="litter.breeder" resname="litter.breeder">
+				<source>Breeder</source>
+				<target>Züchter</target>
+			</trans-unit>
+			<trans-unit id="litter.father" resname="litter.father">
+				<source>Father</source>
+				<target>Vater</target>
+			</trans-unit>
+			<trans-unit id="litter.litter" resname="litter.litter">
+				<source>Litter</source>
+				<target>Wurf</target>
+			</trans-unit>
+			<trans-unit id="litter.litter.from" resname="litter.litter.from">
+				<source>from</source>
+				<target>vom</target>
+			</trans-unit>
+			<trans-unit id="litter.mother" resname="litter.mother">
+				<source>Mother</source>
+				<target>Mutter</target>
+			</trans-unit>
+			<trans-unit id="litter.planned" resname="litter.planned">
+				<source>Planned litter date</source>
+				<target>Geplantes Wurfdatum</target>
+			</trans-unit>
+			<trans-unit id="title" resname="title">
+				<source>List of litters</source>
+				<target>Deck- und Wurfmeldungen</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

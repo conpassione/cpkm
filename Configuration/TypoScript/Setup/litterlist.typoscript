@@ -1,0 +1,62 @@
+tt_content.litterlist {
+  dataProcessing {
+    200 = database-query
+    200 {
+      table = tx_cpkm_domain_model_litter
+      orderBy = l_date, l_name
+      pidInList.data = field : l_page
+      where.data = field:l_type
+      where.wrap = tx_cpkm_domain_model_litter.l_status = |
+      as = litters
+      dataProcessing {
+        10 = database-query
+        10 {
+          table = tx_cpkm_domain_model_kennel
+          pidInList = 0
+          uidInList.data = field : l_kennel
+          as = kennels
+        }
+        20 = database-query
+        20 {
+          table = tx_cpkm_domain_model_pedigree
+          pidInList = 0
+          uidInList.data = field : l_father
+          as = fathers
+          dataProcessing {
+            10 = database-query
+            10 {
+              table = tx_cpkm_domain_model_kennel
+              pidInList = 0
+              uidInList.data = field : p_kennel
+              as = fatherskennels
+            }
+          }
+        }
+        30 = database-query
+        30 {
+          table = tx_cpkm_domain_model_pedigree
+          pidInList = 0
+          uidInList.data = field : l_mother
+          as = mothers
+          dataProcessing {
+            10 = database-query
+            10 {
+              table = tx_cpkm_domain_model_kennel
+              pidInList = 0
+              uidInList.data = field : p_kennel
+              as = motherskennels
+            }
+          }
+        }
+        40 = files
+        40 {
+          references.table = tx_cpkm_domain_model_litter
+          references.fieldName = l_images
+          sorting = title
+          sorting.dirction = ascending
+          as = images
+        }
+      }
+    }
+  }
+}

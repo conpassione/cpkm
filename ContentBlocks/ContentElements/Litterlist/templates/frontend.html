@@ -1,0 +1,80 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/Friendsoftypo3/ContentBlocks/ViewHelpers" xmlns="http://www.w3.org/1999/html">
+
+<f:asset.css identifier="cplicdogs" href="{cb:assetPath()}/frontend.css" />
+
+<div class="litterlist">
+    <f:if condition="{data.header}">
+        <f:cObject
+            typoscriptObjectPath="tt_content.header"
+            data="{data}"
+            table="tt_content"
+        />
+    </f:if>
+    <div class="litters">
+        <f:if condition="{litters}">
+            <f:then>
+                <f:for as="litter" each="{litters}" iteration="ilitter">
+                    <div class="littercard" id="litter{litter.data.uid}" aria-label="Litters">
+                        <div class="littercard--header">
+                            <div>{litter.kennels.0.data.k_name}</div>
+                            <f:if condition="{data.l_type} == 2">
+                                <f:then>
+                                    <div><f:translate key="{cb:languagePath(name: 'conpassione/litterlist')}:litter.litter"/> {litter.data.l_name} <f:translate
+                                        key="{cb:languagePath(name: 'conpassione/litterlist')}:litter.litter.from"/></div>
+                                </f:then>
+                                <f:else>
+                                    <div><f:translate key="{cb:languagePath(name: 'conpassione/litterlist')}:litter.planned"/></div>
+                                </f:else>
+                            </f:if>
+                            <div><time datetime="{litter.data.l_date -> f:format.date(format: '%d.%m.%Y')}">
+                                <f:format.date format="%d. %B %Y">{litter.data.l_date}</f:format.date></time></div>
+                        </div>
+                        <div class="littercard--breeder">
+                            <h4><f:translate key="{cb:languagePath(name: 'conpassione/litterlist')}:litter.breeder"/></h4>
+                            {litter.kennels.0.data.k_first_name} {litter.kennels.0.data.k_last_name}<br>
+                            <f:link.external uri="tel:{litter.kennels.0.data.k_mobile}" class="phone-link--icon">{litter.kennels.0.data.k_mobile}</f:link.external><br>
+                            <f:link.email email="{litter.kennels.0.data.k_email}" class="mail-link--icon">{litter.kennels.0.data.k_email}</f:link.email><br>
+                            <f:link.external uri="{litter.kennels.0.data.k_web}" target="_blank" class="url-link--icon">{litter.kennels.0.data.k_web}</f:link.external>
+                        </div>
+                        <div class="littercard--parents">
+                            <div class="littercard--father">
+                                <h4><f:translate key="{cb:languagePath(name: 'conpassione/litterlist')}:litter.father"/></h4>
+                                <p>{litter.fathers.0.data.p_name} {litter.fathers.0.fatherskennels.0.data.k_name}<br>
+                                <time datetime="{litter.fathers.0.data.p_birth_date -> f:format.date(format: '%d.%m.%Y')}">
+                                    <f:format.date format="%d. %B %Y">{litter.fathers.0.data.p_birth_date}</f:format.date></time></p>
+                            </div>
+                            <div class="littercard--mother">
+                                <h4><f:translate key="{cb:languagePath(name: 'conpassione/litterlist')}:litter.mother"/></h4>
+                                <p>{litter.mothers.0.data.p_name} {litter.mothers.0.motherskennels.0.data.k_name}<br>
+                                <time datetime="{litter.mothers.0.data.p_birth_date -> f:format.date(format: '%d.%m.%Y')}">
+                                    <f:format.date format="%d. %B %Y">{litter.mothers.0.data.p_birth_date}</f:format.date></time></p>
+                            </div>
+                        </div>
+                        <f:if condition="{data.l_type} == 2">
+                            <div class="littercard--litter">
+                                <h4><f:translate key="{cb:languagePath(name: 'conpassione/litterlist')}:litter.litter"/></h4>
+                                <div>{litter.data.l_males} m / {litter.data.l_females} f</div>
+                                <f:format.html>{litter.data.l_comment}</f:format.html>
+                            </div>
+                        </f:if>
+
+                        <div class="littercard--images">
+                            <f:if condition="{litter.images}">
+                                <f:cObject
+                                    typoscriptObjectPath="tt_content.image"
+                                    data="{header: '', showcaption:'1', files: litter.images}"
+                                    table="tt_content"
+                                />
+                            </f:if>
+                        </div>
+                    </div>
+                </f:for>
+            </f:then>
+            <f:else>
+                <p><f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:litter.no-litter"/></p>
+            </f:else>
+        </f:if>
+    </div>
+</div>

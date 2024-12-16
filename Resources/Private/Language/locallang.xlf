@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en" original="locallang.xlf" datatype="plaintext" product-name="conpassione/cpkm" date="2024-12-15T18:08:19+01:00">
+	<file source-language="en" original="locallang.xlf" datatype="plaintext" product-name="conpassione/cpkm" date="2024-12-15T23:10:24+01:00">
 		<header></header>
 		<body>
+			<trans-unit id="kennel.no-kennel" resname="kennel.no-kennel">
+				<source>No active kennels found</source>
+			</trans-unit>
 			<trans-unit id="licdogs.breeder" resname="licdogs.breeder">
 				<source>Breeder</source>
 			</trans-unit>
@@ -18,8 +21,14 @@
 			<trans-unit id="licdogs.dog.size" resname="licdogs.dog.size">
 				<source>Size</source>
 			</trans-unit>
+			<trans-unit id="licdogs.no-dogs" resname="licdogs.no-dogs">
+				<source>No current reproductive dogs</source>
+			</trans-unit>
 			<trans-unit id="licdogs.owner" resname="licdogs.owner">
 				<source>Owner</source>
+			</trans-unit>
+			<trans-unit id="litter.no-litter" resname="litter.no-litter">
+				<source>No current notifications</source>
 			</trans-unit>
 		</body>
 	</file>

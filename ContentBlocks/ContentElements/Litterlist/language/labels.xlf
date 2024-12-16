@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" original="Labels.xlf" datatype="plaintext" product-name="conpassione/cp-textblock" date="2024-12-16T15:28:42+01:00">
+		<header></header>
+		<body>
+			<trans-unit id="description" resname="description">
+				<source>List of litters</source>
+			</trans-unit>
+			<trans-unit id="header.label" resname="header.label">
+				<source>List Title</source>
+			</trans-unit>
+			<trans-unit id="l_page.label" resname="l_page.label">
+				<source>Messages from page</source>
+			</trans-unit>
+			<trans-unit id="litter.breeder" resname="litter.breeder">
+				<source>Breeder</source>
+			</trans-unit>
+			<trans-unit id="litter.father" resname="litter.father">
+				<source>Father</source>
+			</trans-unit>
+			<trans-unit id="litter.litter" resname="litter.litter">
+				<source>Litter</source>
+			</trans-unit>
+			<trans-unit id="litter.litter.from" resname="litter.litter.from">
+				<source>from</source>
+			</trans-unit>
+			<trans-unit id="litter.mother" resname="litter.mother">
+				<source>Mother</source>
+			</trans-unit>
+			<trans-unit id="litter.planned" resname="litter.planned">
+				<source>Planned litter date</source>
+			</trans-unit>
+			<trans-unit id="title" resname="title">
+				<source>List of litters</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

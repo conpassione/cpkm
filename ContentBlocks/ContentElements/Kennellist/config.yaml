@@ -1,0 +1,15 @@
+name: conpassione/kennellist
+typeName: kennellist
+group: kennel
+prefixFields: false
+
+fields:
+  - identifier: conpassione/Header
+    type: Basic
+  - identifier: l_page
+    type: Select
+    renderType: selectSingle
+    minitems: 1
+    maxitems: 1
+    foreign_table: pages
+    foreign_table_where: 'AND pages.module="kennel" ORDER BY pages.title'
