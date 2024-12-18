@@ -39,15 +39,23 @@
                             <h4><f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:licdogs.owner"/></h4>
                             {dog.data.p_first_name} {dog.data.p_last_name}<br>
                             {dog.data.p_address -> f:format.nl2br()}<br>
-                            <f:link.external uri="tel:{dog.data.p_mobile}" class="phone-link--icon">{dog.data.p_mobile}</f:link.external><br>
-                            <f:link.email email="{dog.data.p_email}" class="mail-link--icon">{dog.data.p_email}</f:link.email> <br>
-                            <f:link.external uri="{dog.data.p_web}" target="_blank" class="url-link--icon">{dog.data.p_web}</f:link.external><br>
+                            <f:if condition="{dog.data.p_mobile}">
+                                <f:link.external uri="tel:{dog.data.p_mobile}" class="phone-link--icon">{dog.data.p_mobile}</f:link.external><br>
+                            </f:if>
+                            <f:if condition="{dog.data.p_email}">
+                                <f:link.email email="{dog.data.p_email}" class="mail-link--icon">{dog.data.p_email}</f:link.email> <br>
+                            </f:if>
+                            <f:if condition="{dog.data.p_web}">
+                                <f:link.external uri="{dog.data.p_web}" target="_blank" class="url-link--icon">{dog.data.p_web}</f:link.external>
+                            </f:if>
                         </div>
                         <div class="licdogcard--breeder">
                             <h4><f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:licdogs.breeder"/></h4>
                             {dog.kennels.0.data.k_name}<br>
                             {dog.kennels.0.data.k_first_name} {dog.kennels.0.data.k_last_name}<br>
-                            <f:link.external uri="{dog.kennels.0.data.k_web}" target="_blank" class="url-link--icon">{dog.kennels.0.data.k_web}</f:link.external>
+                            <f:if condition="{dog.kennels.0.data.k_web}">
+                                <f:link.external uri="{dog.kennels.0.data.k_web}" target="_blank" class="url-link--icon">{dog.kennels.0.data.k_web}</f:link.external>
+                            </f:if>
                         </div>
                         <div class="licdogcard--images">
                             <f:if condition="{dog.images}">

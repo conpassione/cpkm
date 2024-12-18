@@ -57,9 +57,9 @@ fields:
           - label: '---'
             value: 0
           - label: 'Museau Normal'
-            value: 1
-          - label: 'Face Rase'
             value: 2
+          - label: 'Face Rase'
+            value: 4
         minitems: 0
         maxitems: 1
       - type: Linebreak
