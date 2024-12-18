@@ -34,9 +34,15 @@
                         <div class="littercard--breeder">
                             <h4><f:translate key="{cb:languagePath(name: 'conpassione/litterlist')}:litter.breeder"/></h4>
                             {litter.kennels.0.data.k_first_name} {litter.kennels.0.data.k_last_name}<br>
-                            <f:link.external uri="tel:{litter.kennels.0.data.k_mobile}" class="phone-link--icon">{litter.kennels.0.data.k_mobile}</f:link.external><br>
-                            <f:link.email email="{litter.kennels.0.data.k_email}" class="mail-link--icon">{litter.kennels.0.data.k_email}</f:link.email><br>
-                            <f:link.external uri="{litter.kennels.0.data.k_web}" target="_blank" class="url-link--icon">{litter.kennels.0.data.k_web}</f:link.external>
+                            <f:if condition="{litter.kennels.0.data.k_mobile}">
+                                <f:link.external uri="tel:{litter.kennels.0.data.k_mobile}" class="phone-link--icon">{litter.kennels.0.data.k_mobile}</f:link.external><br>
+                            </f:if>
+                            <f:if condition="{litter.kennels.0.data.k_email}">
+                                <f:link.email email="{litter.kennels.0.data.k_email}" class="mail-link--icon">{litter.kennels.0.data.k_email}</f:link.email><br>
+                            </f:if>
+                            <f:if condition="{litter.kennels.0.data.k_web}">
+                                <f:link.external uri="{litter.kennels.0.data.k_web}" target="_blank" class="url-link--icon">{litter.kennels.0.data.k_web}</f:link.external>
+                            </f:if>
                         </div>
                         <div class="littercard--parents">
                             <div class="littercard--father">
