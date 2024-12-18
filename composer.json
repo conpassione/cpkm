@@ -19,7 +19,7 @@
 	"minimum-stability": "dev",
 	"prefer-stable" : true,
 	"require": {
-		"conpassione/cpdevsite": "dev-main#v1.0.0",
+		"conpassione/cpdevsite": "dev-main#1.0.2",
 		"typo3/cms-core": "^13"
 	},
 	"autoload": {
