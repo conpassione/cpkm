@@ -5,31 +5,24 @@
 <f:asset.css identifier="cplicdogs" href="{cb:assetPath()}/frontend.css" />
 
 <div class="licdogslist">
-    <f:if condition="{data.header}">
-        <f:cObject
-            typoscriptObjectPath="tt_content.header"
-            data="{data}"
-            table="tt_content"
-        />
-    </f:if>
-    <div class="licdogs">
+    <div class="licdogs" alt="{data.header}">
         <f:if condition="{licdogs}">
             <f:then>
                 <f:variable name="variety">{licdogs.0.data.p_variety}</f:variable>
                 <f:for as="dog" each="{licdogs}" iteration="i-licdogs">
-                    <f:if condition="({variety} == {dog.data.p_variety}) && ({i-licdogs.index} == 0) "><h3 class="h3 licdogs--devider">Museau Normale</h3></f:if>
+                    <f:if condition="({variety} == {dog.data.p_variety}) && ({i-licdogs.index} == 0) "><h2 class="h2 licdogs--devider">Museau Normale</h2></f:if>
                     <f:if condition="({variety} == {dog.data.p_variety}) && ({i-licdogs.index} > 0) "></f:if>
-                    <f:if condition="({variety} != {dog.data.p_variety})"><h3 class="h3 licdogcard--devider">Face Rase</h3>
+                    <f:if condition="({variety} != {dog.data.p_variety})"><h2 class="h2 licdogcard--devider">Face Rase</h2>
                         <f:variable name="variety">{dog.data.p_variety}</f:variable>
                     </f:if>
                     <div class="licdogcard" id="dog{dog.data.uid}" aria-label="Dogs">
-                        <h3 class="licdogcard--header licdogcard--variety-{dog.data.p_variety} h3-font">{dog.data.p_name} {dog.kennels.0.data.k_name}</h3>
+                        <h3 class="licdogcard--header h3-font licdogcard--variety-{dog.data.p_variety}">{dog.data.p_name} {dog.kennels.0.data.k_name}</h3>
                         <div class="licdogcard--dog">
                             <h4><f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:licdogs.dog"/></h4>
-                            <time datetime="{dog.data.p_birth_date -> f:format.date(format: '%d.%m.%Y')}">
+                            <time class="licdogcard--birthdate" datetime="{dog.data.p_birth_date -> f:format.date(format: '%d.%m.%Y')}">
                             <f:format.date format="%d. %B %Y">{dog.data.p_birth_date}</f:format.date></time><br>
                             <f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:licdogs.dog.color"/>: {dog.data.p_color}<br>
-                            <f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:licdogs.dog.size"/>: {dog.data.p_size}<br>
+                            <f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:licdogs.dog.size"/>: <f:format.number decimals="1">{dog.data.p_size}</f:format.number>&nbsp;cm<br>
                             <f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:licdogs.dog.results"/>:<br>
                             <f:for as="resultdoc" each="{dog.resultdocs}" iteration="idocs">
                                 <f:link.file class="file-link--icon" file="{resultdoc}" target="_blank">PDF-{idocs.cycle}</f:link.file><br>

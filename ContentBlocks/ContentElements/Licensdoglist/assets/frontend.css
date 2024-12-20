@@ -2,12 +2,15 @@
 
 .licdogslist {
   --_clr-accent: var(--clr-brand--primary);
-  --_clr-header: var(--clr-bw-090);
+  --_clr-header: var(--clr-brand--primary);
+  --_clr-headerbg: transparent;
+  --_border--radius: var(--border-radius);
+
   container: licdogslist / inline-size;
 
   .licdogs {
     display: grid;
-    gap: var(--gutter);
+    gap: calc(2 * var(--gutter));
   }
 
   .licdogcard--devider {
@@ -22,9 +25,11 @@
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     }
     border: 1px solid var(--_clr-accent);
+    border-radius: var(--_border--radius);
+    overflow: clip;
   }
 
-  .licdogcard > * {
+  .licdogcard > *:not(.licdogcard--images) {
     padding: calc(var(--gutter)/2);
   }
 
@@ -33,12 +38,19 @@
     color: var(--_clr-header);
   }
 
+  .licdogcard--birthdate {
+    font-weight: 700;
+    color: var(--_clr-accent);
+  }
+
   .licdogcard--variety-2 {
-    background-color: var(--_clr-accent);
+    background-color: var(--_clr-headerbg);
+    border-block-end: 1px solid var(--_clr-accent);
   }
 
   .licdogcard--variety-4 {
-    background-color: var(--_clr-accent);
+    background-color: var(--_clr-headerbg);
+    border-block-end: 1px solid var(--_clr-accent);
   }
 
 }

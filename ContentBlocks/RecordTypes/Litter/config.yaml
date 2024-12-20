@@ -116,16 +116,6 @@ fields:
         minitems: 0
         maxitems: 4
         allowed: common-image-types
-        cropVariants:
-          litter:
-            title: Pedigree
-            allowedAspectRatios:
-              portrait:
-                title: Portrait
-                value: 3 / 4
-              landscape:
-                title: Landscape
-                value: 4 / 3
       - type: Linebreak
       - identifier: l_comment
         type: Textarea
