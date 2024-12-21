@@ -17,33 +17,41 @@
             <f:then>
                 <f:for as="kennel" each="{kennels}" iteration="ikennels">
                     <div class="kennelcard" id="kennel{kennel.data.uid}" aria-label="Kennels">
-                        <h3 class="kennelcard--header h3-font">{kennel.data.k_name}</h3>
-                        <div class="kennelcard--breeder">
-                            {kennel.data.k_name}<br>
-                            {kennel.data.k_first_name} {kennel.data.k_last_name}<br>
-                            {kennel.data.k_address -> f:format.nl2br()}
-                        </div>
-                        <div class="kennelcard--communication">
-                            <div class="kennelcard--variety">
+                        <h3 class="kennelcard--header h3-font"><span>{kennel.data.k_name}</span>
+                            <span>
                                 <f:switch expression="{kennel.data.k_variety}">
                                     <f:case value="2">museau normal</f:case>
                                     <f:case value="3">museau normal</f:case>
                                     <f:case value="4">face rase</f:case>
                                     <f:case value="5">face rase</f:case>
-                                    <f:case value="6">museau normal und face rase</f:case>
-                                    <f:case value="7">museau normal und face rase</f:case>
+                                    <f:case value="6">museau normal / face rase</f:case>
+                                    <f:case value="7">museau normal / face rase</f:case>
                                     <f:defaultCase>not defined</f:defaultCase>
                                 </f:switch>
-                            </div>
-                            <f:link.external uri="tel:{kennel.data.k_mobile}" class="phone-link--icon">{kennel.data.k_mobile}</f:link.external><br>
-                            <f:link.email email="{kennel.data.k_email}" class="mail-link--icon">{kennel.data.k_email}</f:link.email><br>
-                            <f:link.external uri="{kennel.data.k_web}" target="_blank" class="url-link--icon">{kennel.data.k_web}</f:link.external>
+                            </span>
+                        </h3>
+                        <div class="kennelcard--breeder">
+                            <h4><f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:kennel.breeder"/></h4>
+                            {kennel.data.k_first_name} {kennel.data.k_last_name}<br>
+                            {kennel.data.k_address -> f:format.nl2br()}
+                        </div>
+                        <div class="kennelcard--communication">
+                            <h4><f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:kennel.contact"/></h4>
+                            <f:if condition="{kennel.data.k_mobile}">
+                                <f:link.external uri="tel:{kennel.data.k_mobile}" class="phone-link--icon">{kennel.data.k_mobile}</f:link.external><br>
+                            </f:if>
+                            <f:if condition="{kennel.data.k_email}">
+                                <f:link.email email="{kennel.data.k_email}" class="mail-link--icon">{kennel.data.k_email}</f:link.email><br>
+                            </f:if>
+                            <f:if condition="{kennel.data.k_web}">
+                                <f:link.external uri="{kennel.data.k_web}" target="_blank" class="url-link--icon">{kennel.data.k_web}</f:link.external>
+                            </f:if>
                         </div>
                     </div>
                 </f:for>
             </f:then>
             <f:else>
-                <p><f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:kennels.no-kennel"/></p>
+                <p><f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:kennel.no-kennel"/></p>
             </f:else>
         </f:if>
     </div>

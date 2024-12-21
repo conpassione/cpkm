@@ -35,12 +35,12 @@ fields:
         size: 30
       - identifier: l_variety
         type: Radio
-        default: 1
+        default: 0
         items:
           - label: 'Museau normal'
-            value: 1
-          - label: 'Face rase'
             value: 2
+          - label: 'Face rase'
+            value: 4
       - identifier: l_date
         type: DateTime
         format: date

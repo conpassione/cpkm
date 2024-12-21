@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en" target-language="it" original="locallang.xlf" datatype="plaintext" product-name="conpassione/cpkm" date="2024-12-15T23:10:24+01:00">
+	<file source-language="en" target-language="it" original="locallang.xlf" datatype="plaintext" product-name="conpassione/cpkm" date="2024-12-21T21:05:38+01:00">
 		<body>
+			<trans-unit id="kennel.breeder" resname="kennel.breeder">
+				<source>Breeder</source>
+				<target>Allevatore</target>
+			</trans-unit>
+			<trans-unit id="kennel.contact" resname="kennel.contact">
+				<source>Contact</source>
+				<target>Contatto</target>
+			</trans-unit>
 			<trans-unit id="kennel.no-kennel" resname="kennel.no-kennel">
 				<source>No active kennels found</source>
 				<target>Attualmente non sono disponibili allevatori attivi</target>

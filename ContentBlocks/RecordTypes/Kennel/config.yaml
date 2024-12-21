@@ -40,11 +40,11 @@ fields:
       default: 0
       items:
         - label: '---'
-          value: 0
-        - label: 'Museau Normal'
           value: 1
-        - label: 'Face Rase'
+        - label: 'Museau Normal'
           value: 2
+        - label: 'Face Rase'
+          value: 4
   - identifier: p_breeder
     type: Palette
     description: Adresse der Zuchtstätte

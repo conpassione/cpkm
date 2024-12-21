@@ -50,12 +50,9 @@ fields:
         minitems: 0
         maxitems: 1
       - identifier: p_variety
-        type: Select
-        renderType: selectSingle
+        type: Radio
         default: 0
         items:
-          - label: '---'
-            value: 0
           - label: 'Museau Normal'
             value: 2
           - label: 'Face Rase'

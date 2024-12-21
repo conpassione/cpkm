@@ -33,6 +33,9 @@
     color: var(--_clr-header);
     background-color: var(--_clr-headerbg);
     border-block-end: 1px solid var(--_clr-accent);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 
 }
