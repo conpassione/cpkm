@@ -17,21 +17,21 @@
             <f:then>
                 <f:for as="litter" each="{litters}" iteration="ilitter">
                     <div class="littercard" id="litter{litter.data.uid}" aria-label="Litters">
-                        <div class="littercard--header">
-                            <div>{litter.kennels.0.data.k_name}
-                            </div>
-                            <f:if condition="{data.l_type} == 2">
-                                <f:then>
-                                    <div><f:translate key="{cb:languagePath(name: 'conpassione/litterlist')}:litter.litter"/> {litter.data.l_name} <f:translate
-                                        key="{cb:languagePath(name: 'conpassione/litterlist')}:litter.litter.from"/></div>
-                                </f:then>
-                                <f:else>
-                                    <div><f:translate key="{cb:languagePath(name: 'conpassione/litterlist')}:litter.planned"/></div>
-                                </f:else>
-                            </f:if>
-                            <div><time datetime="{litter.data.l_date -> f:format.date(format: '%d.%m.%Y')}">
-                                <f:format.date format="%d. %B %Y">{litter.data.l_date}</f:format.date></time></div>
-                        </div>
+                        <h3 class="littercard--header h3-font">
+                            <span>{litter.kennels.0.data.k_name}</span>
+                            <span>
+                                <f:if condition="{data.l_type} == 2">
+                                    <f:then>
+                                        <f:translate key="{cb:languagePath(name: 'conpassione/litterlist')}:litter.litter"/> {litter.data.l_name} <f:translate
+                                            key="{cb:languagePath(name: 'conpassione/litterlist')}:litter.litter.from"/>
+                                    </f:then>
+                                    <f:else>
+                                        <f:translate key="{cb:languagePath(name: 'conpassione/litterlist')}:litter.planned"/>
+                                    </f:else>
+                                </f:if>
+                                <time datetime="{litter.data.l_date -> f:format.date(format: '%Y-%m-%d')}"><f:format.date format="%e. %B %Y">{litter.data.l_date}</f:format.date></time>
+                            </span>
+                        </h3>
                         <div class="littercard--breeder">
                             <h4><f:translate key="{cb:languagePath(name: 'conpassione/litterlist')}:litter.breeder"/></h4>
                             {litter.kennels.0.data.k_first_name} {litter.kennels.0.data.k_last_name}<br>
