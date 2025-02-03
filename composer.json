@@ -19,17 +19,17 @@
 	"minimum-stability": "dev",
 	"prefer-stable" : true,
 	"require": {
-		"conpassione/cpdevsite": "dev-main#1.0.2",
+		"conpassione/cpdevsite": "*",
 		"typo3/cms-core": "^13"
 	},
 	"autoload": {
 		"psr-4": {
-			"Conpassione\\cpkm\\": "Classes"
+			"Conpassione\\Cpkm\\": "Classes"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Conpassione\\cpkm\\Tests\\": "Tests"
+			"Conpassione\\Cpkm\\Tests\\": "Tests"
 		}
 	},
 	"config": {
