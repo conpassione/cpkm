@@ -1,0 +1,42 @@
+/* Created by Content Blocks */
+
+.kennellist {
+  --_clr-accent: var(--clr-brand--primary);
+  --_clr-header: var(--clr-brand--primary);
+  --_clr-headerbg: transparent;
+  --_border--radius: var(--border-radius);
+
+  container: kennellist / inline-size;
+
+  .kennels {
+    display: grid;
+    gap: calc(2 * var(--gutter));
+  }
+
+
+  .kennelcard {
+    display: grid;
+    gap: var(--gutter);
+    grid-template-columns: 1fr;
+    border: 1px solid var(--_clr-accent);
+    border-radius: var(--_border--radius);
+
+    @container kennellist (width > 480px) {
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+  }
+
+  .kennelcard > * {
+    padding: calc(var(--gutter)/2);
+  }
+
+  .kennelcard--header {
+    grid-column: 1 / -1;
+    color: var(--_clr-header);
+    background-color: var(--_clr-headerbg);
+    border-block-end: 1px solid var(--_clr-accent);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}

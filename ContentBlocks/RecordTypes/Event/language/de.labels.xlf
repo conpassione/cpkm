@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="de" original="Labels.xlf" datatype="plaintext" product-name="conpassione/kennel" date="2025-02-25T16:52:34+01:00">
+		<header></header>
+		<body>
+			<trans-unit id="e_date.label">
+				<source>Date</source>
+				<target>Datum</target>
+			</trans-unit>
+			<trans-unit id="e_description.label">
+				<source>Description</source>
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="e_place.label">
+				<source>Location</source>
+				<target>Ort</target>
+			</trans-unit>
+			<trans-unit id="e_title.label">
+				<source>Ttle</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Event</source>
+				<target>Veranstaltung</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

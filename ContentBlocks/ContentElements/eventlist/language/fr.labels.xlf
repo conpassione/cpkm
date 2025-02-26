@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="fr" original="" datatype="plaintext" date="2025-02-25T20:12:48+01:00">
+		<body>
+			<trans-unit id="description">
+				<source>List top 5 or all events</source>
+				<target>List des manifestations</target>
+			</trans-unit>
+			<trans-unit id="e_type.items.1.label">
+				<source>Short List</source>
+				<target>Liste courte</target>
+			</trans-unit>
+			<trans-unit id="e_type.items.2.label">
+				<source>Long List</source>
+				<target>Liste longue</target>
+			</trans-unit>
+			<trans-unit id="e_type.label">
+				<source>Listtype</source>
+				<target>Typ de la liste</target>
+			</trans-unit>
+			<trans-unit id="header.label">
+				<source>List Title</source>
+				<target>Titre de la liste</target>
+			</trans-unit>
+			<trans-unit id="l_page.label">
+				<source>Events from page</source>
+				<target>Manifestations de la page</target>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Event list</source>
+				<target>Liste des manifestations</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

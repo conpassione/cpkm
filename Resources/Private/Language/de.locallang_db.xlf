@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en" target-language="de" original="locallang_db.xlf" datatype="plaintext" product-name="conpassione/cpkm" date="2024-12-15T18:08:19+01:00">
-		<header></header>
+	<file source-language="en" target-language="de" original="locallang_db.xlf" datatype="plaintext" product-name="conpassione/cpkm" date="2025-02-25T19:11:25+01:00">
 		<body>
-			<trans-unit id="extname" resname="extname">
+			<trans-unit id="extname">
 				<source>Kennel Management</source>
 				<target>Zuchtverwaltung</target>
 			</trans-unit>
-			<trans-unit id="pages.label.kennel" resname="pages.label.kennel">
+			<trans-unit id="pages.label.event">
+				<source>Event</source>
+				<target>Veranstaltung</target>
+			</trans-unit>
+			<trans-unit id="pages.label.kennel">
 				<source>Kennel</source>
 				<target>Zuchtstätte</target>
 			</trans-unit>
-			<trans-unit id="pages.label.litter" resname="pages.label.litter">
+			<trans-unit id="pages.label.litter">
 				<source>Litter</source>
 				<target>Deck- und Wurfmeldung</target>
 			</trans-unit>
-			<trans-unit id="pages.label.pedigree" resname="pages.label.pedigree">
+			<trans-unit id="pages.label.pedigree">
 				<source>Pedigree</source>
 				<target>Stammbaum</target>
 			</trans-unit>

@@ -1,0 +1,36 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/Friendsoftypo3/ContentBlocks/ViewHelpers">
+
+<f:asset.css identifier="cpkennelss" href="{cb:assetPath()}/frontend.css" />
+
+<f:debug>{_all}</f:debug>
+<div class="kennellist">
+    <f:if condition="{data.header}">
+        <f:cObject
+            typoscriptObjectPath="tt_content.header"
+            data="{data}"
+            table="tt_content"
+        />
+    </f:if>
+    <div class="events">
+        <f:if condition="{events}">
+            <f:then>
+                <f:for as="event" each="{events}" iteration="ievents">
+                    <div class="eventcard" id="event{event.data.uid}" aria-label="Events">
+                        <h3 class="keventcard--header h3-font"><span>{event.data.e_date}</span>
+                            <span>{event.data.e_title}</span>
+                        </h3>
+                        <f:format.raw>{event.data.e_place}</f:format.raw>
+                        <div class="eventcard--details">
+                            <f:format.raw>{event.data.e_description}</f:format.raw>
+                        </div>
+                    </div>
+                </f:for>
+            </f:then>
+            <f:else>
+                <p><f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:event.no-event"/></p>
+            </f:else>
+        </f:if>
+    </div>
+</div>
