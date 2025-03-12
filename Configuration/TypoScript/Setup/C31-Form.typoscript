@@ -1,0 +1,7 @@
+plugin.tx_form {
+  settings {
+    yamlConfigurations {
+      36651 = EXT:cpkm/Configuration/Form/CpFormSetup.yaml
+    }
+  }
+}

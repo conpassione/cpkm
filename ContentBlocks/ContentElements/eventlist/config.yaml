@@ -6,18 +6,12 @@ prefixFields: false
 fields:
   - identifier: conpassione/Header
     type: Basic
-  - identifier: e_type
-    type: Radio
-    default: 1
-    items:
-      - label: 'kurze Liste'
-        value: 1
-      - label: 'lange Liste'
-        value: 2
   - identifier: l_page
     type: Select
     renderType: selectSingle
-    minitems: 1
+    minitems: 0
     maxitems: 1
     foreign_table: pages
     foreign_table_where: 'AND pages.module="event" ORDER BY pages.title'
+  - identifier: pages
+    useExistingField: true

@@ -1,0 +1,14 @@
+persistenceManager:
+  allowedExtensionPaths:
+    100: 'EXT:cpkm/Resources/Private/Forms/'
+  allowSaveToExtensionPaths: false
+  allowDeleteFromExtensionPaths: false
+
+formManager:
+  selectablePrototypesConfiguration:
+    100:
+      newFormTemplates:
+        366501:
+          templatePath: 'EXT:cpdevsite/Resources/Private/Forms/SimpleMessageForm.yaml'
+          label: 'Einfaches Anfrageformular'
+
