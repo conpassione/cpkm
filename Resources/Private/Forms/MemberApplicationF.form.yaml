@@ -1,0 +1,219 @@
+identifier: membership-application
+label: "Formulaire de demande d'adhésion"
+type: Form
+prototypeName: standard
+renderingOptions:
+  submitButtonLabel: Evoyer
+finishers:
+  - identifier: EmailToSender
+    options:
+      subject: "Mail de confirmation de la demande d'adhésion"
+      recipients:
+        '{email}': '{lastname} {firstname}'
+      senderAddress: 'info@csbp.ch'
+      senderName: 'Club Suisse du Berger des Pyrénées'
+      addHtmlPart: true
+      attachUploads: false
+      title: 'Demande d&#34;adhésion'
+  - identifier: EmailToReceiver
+    options:
+      subject: 'Demande d&#34;adhésion de {lastname} {firstname}'
+      recipients:
+        info@conpassione.ch: 'Club Suisse du Berger des Pyrénées'
+      senderAddress: '{email}'
+      senderName: '{lastname} {firstname}'
+      addHtmlPart: true
+      attachUploads: false
+      title: 'Demande d&#34;adhésion via site internet de {firstname} {lastname}'
+  - identifier: Confirmation
+    options:
+      message: "Merci beaucoup pour ton inscription. Tu recevras une réponse de notre part dans un délai d'une semaine."
+      contentElementUid: ''
+
+renderables:
+  - renderingOptions:
+      previousButtonLabel: 'Page précédente'
+      nextButtonLabel: 'Page suivante'
+    type: Page
+    identifier: page-1
+    label: 'Membre titulaire'
+    renderables:
+      - properties:
+          options:
+            - '---'
+            - M.
+            - Mme
+          elementDescription: 'Veuillez choisir une formule de politesse'
+        identifier: salutation
+        type: SingleSelect
+        label: Anrede
+        defaultValue: 0
+      - type: GridRow
+        identifier: gridrow-2
+        label: 'Grid: Zeile'
+        renderables:
+          - defaultValue: ''
+            type: Text
+            identifier: lastname
+            label: Nom
+            properties:
+              elementDescription: 'Nom du membre titulaire'
+              fluidAdditionalAttributes:
+                required: required
+              validationErrorMessages:
+                - code: 1238110957
+                  message: 'Saisis ton nom'
+            validators:
+              - identifier: NotEmpty
+          - defaultValue: ''
+            type: Text
+            identifier: firstname
+            label: Prénom
+            properties:
+              elementDescription: 'Prénom du membre titulaire'
+              fluidAdditionalAttributes:
+                required: required
+              validationErrorMessages:
+                - code: 1221560910
+                  message: 'Bitte Vorname ausfüllen'
+            validators:
+              - identifier: NotEmpty
+      - defaultValue: ''
+        type: Textarea
+        identifier: address
+        label: Adresse
+      - type: GridRow
+        identifier: gridrow-3
+        label: 'Grid: Zeile'
+        renderables:
+          - defaultValue: ''
+            identifier: zipcode
+            type: Text
+            label: CP
+          - defaultValue: ''
+            identifier: city
+            type: Text
+            label: Lieu
+      - type: GridRow
+        identifier: gridrow-4
+        label: 'Grid: Zeile'
+        renderables:
+          - defaultValue: ''
+            type: Text
+            identifier: mobile
+            label: 'Téléphone portable'
+            properties:
+              elementDescription: ''
+          - defaultValue: ''
+            type: Text
+            identifier: email
+            label: Courriel (E-mail)
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              validationErrorMessages:
+                - code: 1221559976
+                  message: "L'e-mail est nécessaire pour la communication, veuillez saisir un e-mail valide."
+            validators:
+              - identifier: EmailAddress
+              - identifier: NotEmpty
+  - renderingOptions:
+      previousButtonLabel: 'Page précédente'
+      nextButtonLabel: 'Page suivante'
+    type: Page
+    identifier: page-2
+    label: 'Membre partenaire'
+    renderables:
+      - type: GridRow
+        identifier: gridrow-21
+        label: 'Grid: Zeile'
+        renderables:
+          - defaultValue: ''
+            type: Text
+            identifier: lastname2
+            label: Nom
+            properties:
+              elementDescription: 'Nom du membre partenaire'
+          - defaultValue: ''
+            type: Text
+            identifier: firstname2
+            label: Prénom
+            properties:
+              elementDescription: 'Prénom du membre partenaire'
+      - type: GridRow
+        identifier: gridrow-24
+        label: 'Grid: Zeile'
+        renderables:
+          - defaultValue: ''
+            type: Text
+            identifier: mobile2
+            label: 'Téléphone portable'
+            properties:
+              elementDescription: ''
+      - defaultValue: ''
+        type: Text
+        identifier: email2
+        label: Courriel (E-mail)
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            - code: 1221559976
+              message: "L'e-mail est nécessaire pour la communication, veuillez saisir un e-mail valide."
+        validators:
+          - identifier: EmailAddress
+          - identifier: NotEmpty
+      - properties:
+          text: 'Les informations suivantes sont nécessaires pour vous fournir les informations correctes en tant que membre du club.'
+        type: StaticText
+        identifier: statictext-1
+        label: Informations
+      - type: Checkbox
+        identifier: confirmation
+        label: "J'accepte que les données saisies soient utilisées pour les besoins du club et qu'elles figurent dans la liste des membres de la SCS."
+        properties:
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            - code: 1221560910
+              message: "Veuillez accepter l'utilisation des données."
+        validators:
+          - identifier: NotEmpty
+      - type: GridRow
+        identifier: gridrow-1
+        label: 'Grid: Zeile'
+        renderables:
+          - properties:
+              options:
+                deutsch: deutsch
+                francais: français
+              elementDescription: 'Choisis la langue de correspondance.'
+              fluidAdditionalAttributes:
+                required: required
+            type: RadioButton
+            identifier: comlanguage
+            label: 'Langue de correspondance'
+            defaultValue: deutsch
+            validators:
+              - identifier: NotEmpty
+          - properties:
+              options:
+                'Schweizer HUND': 'Schweizer HUND'
+                'Cynologie Romand': 'Cynologie Romand'
+                'Abo über anderen Verein': 'Abonnement via un autre club'
+              elementDescription: 'Choisir le magazine officiel'
+              fluidAdditionalAttributes:
+                required: required
+            type: RadioButton
+            identifier: officialpaper
+            label: 'Magazine officiel'
+            defaultValue: 'Schweizer HUND'
+            validators:
+              - identifier: NotEmpty
+  - renderingOptions:
+      previousButtonLabel: 'Page précédente'
+      nextButtonLabel: 'Page suivante'
+    type: SummaryPage
+    identifier: summarypage-1
+    label: 'Résumé'

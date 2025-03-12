@@ -1,0 +1,9 @@
+# yamllint disable rule:line-length
+
+TCEpage:
+  author: 'Club Suisse du Berger des Pyrénées'
+  author_email: info@csbp.ch
+  author_phone: '+41793301011'
+  org_name: 'CSBP'
+  org_logo: 'EXT:cpdevsite/Resources/Public/Images/logo_cp_core_G35_black_mit.png'
+

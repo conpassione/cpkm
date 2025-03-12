@@ -1,5 +1,5 @@
 identifier: membership-application
-label: newFormTemplates.MembershipApplicationForm.label
+label: Mitgliedschaftsantragsformular
 type: Form
 prototypeName: standard
 renderingOptions:
@@ -7,35 +7,33 @@ renderingOptions:
 finishers:
   - identifier: EmailToSender
     options:
-      subject: 'Beantragung Mitgliedschaft'
+      subject: 'Bestätigungsmail Mitgliedschaftsantrag'
+      recipients:
+        '{email}': '{lastname} {firstname}'
+      senderAddress: 'info@csbp.ch'
+      senderName: 'Club Suisse du Berger des Pyrénées'
+      addHtmlPart: true
+      attachUploads: false
+      title: 'Mitgliedschaftsantrag'
+  - identifier: EmailToReceiver
+    options:
+      subject: 'Mitgliedschaftsantrag von {lastname} {firstname}'
       recipients:
         info@csbp.ch: 'Club Suisse du Berger des Pyrénées'
       senderAddress: '{email}'
-      senderName: '{lastname}  {firstname}'
+      senderName: '{lastname} {firstname}'
       addHtmlPart: true
       attachUploads: false
-      title: 'Beantragung Mitgliedschaft für den Club Suisse du Berger des Pyrénées für  {firstname} {lastname}'
-  - identifier: EmailToReceiver
-    options:
-      subject: Mitgliedschaftsantrag
-      recipients:
-        info@csbp.ch: CSBP
-      senderAddress: '{email}'
-      senderName: '{lastname}  {firstname}'
-      addHtmlPart: true
-      attachUploads: false
-      translation:
-        language: Standard
-      title: ''
+      title: 'Mitgliedschaftsantrag via Website von {firstname} {lastname}'
   - identifier: Confirmation
     options:
-      message: 'Besten Dank für Ihre Anmeldung.'
+      message: 'Besten Dank für Deine Anmeldung. Wir werden uns innerhalb einer Woche bei Ihnen melden.'
       contentElementUid: ''
 
 renderables:
   - renderingOptions:
       previousButtonLabel: 'Vorherige Seite'
-      nextButtonLabel: 'Nächster Schritt'
+      nextButtonLabel: 'Nächster Seite'
     type: Page
     identifier: page-1
     label: Hauptmitglied
@@ -43,12 +41,12 @@ renderables:
       - properties:
           options:
             - '---'
-            - Herr
-            - Frau
+            - 'Herr'
+            - 'Frau'
           elementDescription: 'Bitte Anrede wählen'
         identifier: salutation
         type: SingleSelect
-        label: Anrede
+        label: 'Anrede'
         defaultValue: 0
       - type: GridRow
         identifier: gridrow-2
@@ -57,50 +55,34 @@ renderables:
           - defaultValue: ''
             type: Text
             identifier: lastname
-            label: Name
+            label: 'Name'
             properties:
               elementDescription: 'Nachname des Mitgliedes'
               fluidAdditionalAttributes:
                 required: required
-                minlength: '5'
-                maxlength: '100'
-                placeholder: Nachname
+                placeholder: ''
               validationErrorMessages:
                 - code: 1238110957
                   message: 'Bitte Name erfassen'
             validators:
               - identifier: NotEmpty
-              - options:
-                  minimum: '5'
-                  maximum: '100'
-                identifier: StringLength
           - defaultValue: ''
             type: Text
             identifier: firstname
-            label: Vorname
+            label: 'Vorname'
             properties:
               elementDescription: 'Vorname des Mitgliedes'
               fluidAdditionalAttributes:
                 required: required
-                minlength: '1'
-                maxlength: '100'
-                placeholder: Vorname
               validationErrorMessages:
                 - code: 1221560910
                   message: 'Bitte Vorname ausfüllen'
             validators:
               - identifier: NotEmpty
-              - options:
-                  minimum: '1'
-                  maximum: '100'
-                identifier: StringLength
       - defaultValue: ''
         type: Textarea
         identifier: address
-        label: Adresse
-        properties:
-          fluidAdditionalAttributes:
-            placeholder: 'Strasse und Nr'
+        label: 'Adresse'
       - type: GridRow
         identifier: gridrow-3
         label: 'Grid: Zeile'
@@ -109,17 +91,10 @@ renderables:
             identifier: zipcode
             type: Text
             label: PLZ
-            properties:
-              fluidAdditionalAttributes:
-                placeholder: PLZ
-              elementDescription: Postleitzahl
           - defaultValue: ''
             identifier: city
             type: Text
             label: Ort
-            properties:
-              fluidAdditionalAttributes:
-                placeholder: Wohnhort
       - type: GridRow
         identifier: gridrow-4
         label: 'Grid: Zeile'
@@ -127,38 +102,19 @@ renderables:
           - defaultValue: ''
             type: Text
             identifier: mobile
-            label: Mobile
+            label: Mobiltelefon
             properties:
               elementDescription: ''
-              fluidAdditionalAttributes:
-                placeholder: '079 000 00 00'
-                required: required
-                minlength: '10'
-                maxlength: '25'
-              validationErrorMessages:
-                - code: 1238110957
-                  message: 'Vollständige Telefonnummer erfassen'
-            validators:
-              - identifier: NotEmpty
-              - options:
-                  minimum: '10'
-                  maximum: '25'
-                identifier: StringLength
           - defaultValue: ''
-            type: Email
+            type: Text
             identifier: email
             label: E-Mail
             properties:
               fluidAdditionalAttributes:
-                placeholder: email@madomain.ch
                 required: required
-                autocomplete: email
               validationErrorMessages:
-                - code: 1221560910
-                  message: 'Bitte E-Mail Adresse erfassen'
                 - code: 1221559976
-                  message: 'Die E-Mail ist für die Kommunikation nötig'
-              elementDescription: 'Die E-Mail Adresse wird für die Kommunikation benötigt.'
+                  message: 'Die E-Mail ist für die Kommunikation nötig, bitte gültige E-Mail erfassen.'
             validators:
               - identifier: EmailAddress
               - identifier: NotEmpty
@@ -167,7 +123,7 @@ renderables:
       nextButtonLabel: 'Nächster Schritt'
     type: Page
     identifier: page-2
-    label: Parftnermitglied
+    label: 'Partnermitglied'
     renderables:
       - type: GridRow
         identifier: gridrow-21
@@ -176,13 +132,13 @@ renderables:
           - defaultValue: ''
             type: Text
             identifier: lastname2
-            label: Name Partner
+            label: Name
             properties:
               elementDescription: 'Name des Partnermitgliedes'
           - defaultValue: ''
             type: Text
             identifier: firstname2
-            label: Vorname Partner
+            label: Vorname
             properties:
               elementDescription: 'Vorname des Partnermitgliedes'
       - type: GridRow
@@ -192,22 +148,24 @@ renderables:
           - defaultValue: ''
             type: Text
             identifier: mobile2
-            label: Mobile Partner
+            label: Mobiltelefon
             properties:
               elementDescription: ''
-              fluidAdditionalAttributes:
-                placeholder: '079 000 00 00'
           - defaultValue: ''
-            type: Email
+            type: Text
             identifier: email2
-            label: E-Mail Partner
+            label: E-Mail
             properties:
               fluidAdditionalAttributes:
-                placeholder: email@madomain.ch
+                required: required
+              validationErrorMessages:
+                - code: 1221559976
+                  message: 'Die E-Mail ist für die Kommunikation nötig, bitte gültige E-Mail erfassen.'
             validators:
               - identifier: EmailAddress
+              - identifier: NotEmpty
       - properties:
-          text: 'Die folgenden Angaben werden benötigt um Sie als Clubmitglied mit den korrekten Informationen zu beliefern'
+          text: 'Die folgenden Angaben werden benötigt um Sie als Clubmitglied mit den korrekten Informationen zu beliefern.'
         type: StaticText
         identifier: statictext-1
         label: Zusatzinformationen
@@ -220,7 +178,7 @@ renderables:
             required: required
           validationErrorMessages:
             - code: 1221560910
-              message: 'Bitte Verwendung der Daten zustimmen'
+              message: 'Bitte Verwendung der Daten zustimmen.'
         validators:
           - identifier: NotEmpty
       - type: GridRow
@@ -231,7 +189,7 @@ renderables:
               options:
                 deutsch: deutsch
                 francais: français
-              elementDescription: 'Wählen Sie die Korresponenzsprache aus'
+              elementDescription: 'Wählen Sie die Korresponenzsprache aus.'
               fluidAdditionalAttributes:
                 required: required
             type: RadioButton
