@@ -1,43 +1,35 @@
 /* settings */
 @layer cpmk {
-  /*   @font-face {
-      font-family:  'Oxygen';
-      src:          url('../Fonts/Oxygen/Oxygen-Light.woff2') format('woff2');
-      font-weight:  300;
-      font-style:   normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family:  'Oxygen';
-      src:          url('../Fonts/Oxygen/Oxygen-Bold.woff2') format('woff2');
-      font-weight:  700;
-      font-style:   normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family:  'Oxygen';
-      src:          url('../Fonts/Oxygen/Oxygen-Regular.woff2') format('woff2');
-      font-weight:  400;
-      font-style:   normal;
-      font-display: swap;
-    } */
-  /*   :root {
-      --clr-brand--primary:           oklch(0.6 0.061 250);
-      --clr-brand--secondary:         oklch(0.5 0.03 149);
-      --clr-brand--tertiary:          oklch(0.5 0.07 231);
-      --clr-brand--quaternary:        oklch(0.5 0.13 318);
-      --border-radius: 1rem;
-
-      --ff:                 'Oxygen';
-      --ff-condensed:       'UbuntuCondensed';
-      --ff-serif:           'Oxygen';
-      --ff-h:               'Oxygen';
-      --ff-nav:             'Oxygen';
-      --ff-mono:            'UbuntuMono';
-      --ff-symbol:          'Symbols';
-    } */
+  @font-face {
+    font-family: "Oxygen";
+    src: url("../Fonts/Oxygen/Oxygen-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Oxygen";
+    src: url("../Fonts/Oxygen/Oxygen-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Oxygen";
+    src: url("../Fonts/Oxygen/Oxygen-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  :root {
+    --ff: "Oxygen";
+    --ff-condensed: "UbuntuCondensed";
+    --ff-serif: "Oxygen";
+    --ff-h: "Oxygen";
+    --ff-nav: "Oxygen";
+    --ff-mono: "UbuntuMono";
+    --ff-symbol: "Symbols";
+  }
 }
 
 /*# sourceMappingURL=cpmkLayout.css.map */
