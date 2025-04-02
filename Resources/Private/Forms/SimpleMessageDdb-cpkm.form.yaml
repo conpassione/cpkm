@@ -1,0 +1,139 @@
+identifier: simple-messaged-db-cpkm
+label: 'Einfaches Anfrageformular mit Datenbank'
+type: Form
+prototypeName: standard
+renderingOptions:
+  submitButtonLabel: Absenden
+finishers:
+  - identifier: EmailToSender
+    options:
+      subject: 'Bestätigungsmail'
+      recipients:
+        '{email}': '{lastname} {firstname}'
+      senderAddress: 'info@csbp.ch'
+      senderName: 'CSBP'
+      addHtmlPart: true
+      attachUploads: false
+      title: 'Deine Anfrage'
+  - identifier: EmailToReceiver
+    options:
+      subject: 'Anfrage von {lastname} {firstname}'
+      recipients:
+        info@csbp.ch: 'CSBP'
+      senderAddress: '{email}'
+      senderName: '{lastname} {firstname}'
+      addHtmlPart: true
+      attachUploads: false
+      title: 'Anfrage via Website von {firstname} {lastname}'
+  - identifier: SaveToDatabase
+    options:
+      table: 'tx_conpassione_registrationform'
+      mode: insert
+      databaseColumnMappings:
+        tstamp:
+          value: '{__currentTimestamp}'
+        pid:
+          value: '{eventpid}'
+      elements:
+        lastname:
+          mapOnDatabaseColumn: 'lastname'
+        firstname:
+          mapOnDatabaseColumn: 'firstname'
+        mobile:
+          mapOnDatabaseColumn: 'mobile'
+        email:
+          mapOnDatabaseColumn: 'email'
+        sm-message:
+          mapOnDatabaseColumn: 'sm-message'
+        event:
+          mapOnDatabaseColumn: 'event'
+  - identifier: Confirmation
+    options:
+      message: 'Besten Dank für Deine Anfrage. Du bekommst innerhalb einer Woche Antwort von uns.'
+      contentElementUid: ''
+renderables:
+  - type: Page
+    identifier: smpage-1
+    renderables:
+      - identifier: event
+        defaultValue: 'ERROR: Unable to get Eventname'
+        type: Text
+        label: 'Anmeldung für Event'
+        properties:
+          containerClassAttribute: 'form-event-title'
+          fluidAdditionalAttributes:
+            readonly: readonly
+      - identifier: eventpid
+        type: Hidden
+        properties:
+          elementClassAttribute: 'form-event-pid'
+          fluidAdditionalAttributes:
+            readonly: readonly
+            hidden: hidden
+      - type: GridRow
+        identifier: gridrow-2
+        label: 'Person'
+        renderables:
+          - identifier: lastname
+            defaultValue: ''
+            type: Text
+            label: 'Name'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              - identifier: NotEmpty
+          - identifier: firstname
+            defaultValue: ''
+            type: Text
+            label: 'Vorname'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              - identifier: NotEmpty
+      - identifier: gridrow-4
+        type: GridRow
+        label: 'Kommunikation'
+        renderables:
+          - defaultValue: ''
+            type: Text
+            identifier: mobile
+            label: 'Mobiltelefon'
+            properties:
+              elementDescription: ''
+          - identifier: email
+            defaultValue: ''
+            type: Text
+            label: E-Mail
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              validationErrorMessages:
+                - code: 1221559976
+                  message: 'Die E-Mail ist für die Kommunikation nötig, bitte gültige E-Mail erfassen.'
+            validators:
+              - identifier: EmailAddress
+              - identifier: NotEmpty
+      - identifier: sm-message
+        defaultValue: ''
+        type: Textarea
+        label: 'Mitteilung'
+      - type: Checkbox
+        identifier: confirmation
+        label: 'Ich bin einverstanden, dass die erfassten Daten für die Zwecke der Veranstaltung verwendet werden.'
+        properties:
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            - code: 1221560910
+              message: 'Bitte Verwendung der Daten zustimmen.'
+        validators:
+          - identifier: NotEmpty
+      - identifier: sm-recinfo
+        properties:
+          text: '* Pflichtfelder'
+        type: StaticText
+        label: ''
+
