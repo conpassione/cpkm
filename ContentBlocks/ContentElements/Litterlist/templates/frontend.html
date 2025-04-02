@@ -12,6 +12,7 @@
             table="tt_content"
         />
     </f:if>
+    <f:debug>{_all}</f:debug>
     <div class="litters">
         <f:if condition="{litters}">
             <f:then>
@@ -29,7 +30,7 @@
                                         <f:translate key="{cb:languagePath(name: 'conpassione/litterlist')}:litter.planned"/>
                                     </f:else>
                                 </f:if>
-                                <time datetime="{litter.data.l_date -> f:format.date(format: '%Y-%m-%d')}"><f:format.date format="%e. %B %Y">{litter.data.l_date}</f:format.date></time>
+                                <time datetime="{litter.data.l_date -> f:format.date(format: 'Y-M-d')}"><f:format.date format="%e. %B %Y">{litter.data.l_date}</f:format.date></time>
                             </span>
                         </h3>
                         <div class="littercard--breeder">

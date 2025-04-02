@@ -1,4 +1,4 @@
-identifier: membership-application
+identifier: membership-applicationd-cpkm
 label: Mitgliedschaftsantragsformular
 type: Form
 prototypeName: standard
@@ -120,7 +120,7 @@ renderables:
               - identifier: NotEmpty
   - renderingOptions:
       previousButtonLabel: 'Vorherige Seite'
-      nextButtonLabel: 'Nächster Schritt'
+      nextButtonLabel: 'Nächste Seite'
     type: Page
     identifier: page-2
     label: 'Partnermitglied'
@@ -156,14 +156,11 @@ renderables:
             identifier: email2
             label: E-Mail
             properties:
-              fluidAdditionalAttributes:
-                required: required
               validationErrorMessages:
                 - code: 1221559976
                   message: 'Die E-Mail ist für die Kommunikation nötig, bitte gültige E-Mail erfassen.'
             validators:
               - identifier: EmailAddress
-              - identifier: NotEmpty
       - properties:
           text: 'Die folgenden Angaben werden benötigt um Sie als Clubmitglied mit den korrekten Informationen zu beliefern.'
         type: StaticText

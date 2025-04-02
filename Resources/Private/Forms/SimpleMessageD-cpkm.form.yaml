@@ -1,33 +1,33 @@
-identifier: simple-messaged
-label: 'Formulaire de demande simple'
+identifier: simple-messaged-cpkm
+label: 'Einfaches Anfrageformular'
 type: Form
 prototypeName: standard
 renderingOptions:
-  submitButtonLabel: Evoyer
+  submitButtonLabel: Absenden
 finishers:
   - identifier: EmailToSender
     options:
-      subject: 'Courriel de confirmation'
+      subject: 'Bestätigungsmail'
       recipients:
         '{email}': '{lastname} {firstname}'
       senderAddress: 'info@csbp.ch'
       senderName: 'Club Suisse du Berger des Pyrénées'
       addHtmlPart: true
       attachUploads: false
-      title: 'Ton demande'
+      title: 'Deine Anfrage'
   - identifier: EmailToReceiver
     options:
-      subject: 'Demande de {lastname} {firstname}'
+      subject: 'Anfrage von {lastname} {firstname}'
       recipients:
         info@csbp.ch: 'Club Suisse du Berger des Pyrénées'
       senderAddress: '{email}'
       senderName: '{lastname} {firstname}'
       addHtmlPart: true
       attachUploads: false
-      title: 'Demande via site internet de {firstname} {lastname}'
+      title: 'Anfrage via Website von {firstname} {lastname}'
   - identifier: Confirmation
     options:
-      message: "Merci pour ta demande. Tu recevras une réponse de notre part dans un délai d'une semaine."
+      message: 'Besten Dank für Deine Anfrage. Du bekommst innerhalb einer Woche Antwort von uns.'
       contentElementUid: ''
 renderables:
   - type: Page
@@ -35,12 +35,12 @@ renderables:
     renderables:
       - type: GridRow
         identifier: gridrow-2
-        label: 'Données personnelles'
+        label: 'Person'
         renderables:
           - identifier: lastname
             defaultValue: ''
             type: Text
-            label: 'Nom'
+            label: 'Name'
             properties:
               fluidAdditionalAttributes:
                 required: required
@@ -49,7 +49,7 @@ renderables:
           - identifier: firstname
             defaultValue: ''
             type: Text
-            label: 'Prénom'
+            label: 'Vorname'
             properties:
               fluidAdditionalAttributes:
                 required: required
@@ -57,12 +57,12 @@ renderables:
               - identifier: NotEmpty
       - identifier: gridrow-4
         type: GridRow
-        label: 'Communication'
+        label: 'Kommunikation'
         renderables:
           - defaultValue: ''
             type: Text
             identifier: mobile
-            label: 'Téléphone portable'
+            label: 'Mobiltelefon'
             properties:
               elementDescription: ''
           - identifier: email
@@ -74,16 +74,16 @@ renderables:
                 required: required
               validationErrorMessages:
                 - code: 1221559976
-                  message: "L'e-mail est nécessaire pour la communication, veuillez saisir un e-mail valide."
+                  message: 'Die E-Mail ist für die Kommunikation nötig, bitte gültige E-Mail erfassen.'
             validators:
               - identifier: EmailAddress
               - identifier: NotEmpty
       - identifier: smmessage
         defaultValue: ''
         type: Textarea
-        label: 'Demande'
+        label: 'Mitteilung'
       - identifier: smrecinfo
         properties:
-          text: '* Champs obligatoires'
+          text: '* Pflichtfelder'
         type: StaticText
         label: ''

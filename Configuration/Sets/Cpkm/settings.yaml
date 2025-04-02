@@ -7,3 +7,5 @@ TCEpage:
   org_name: 'CSBP'
   org_logo: 'EXT:cpkm/Resources/Public/Images/logo-berger.png'
 
+litter_timelimit: 90
+

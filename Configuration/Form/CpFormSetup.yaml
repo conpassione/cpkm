@@ -1,6 +1,3 @@
 persistenceManager:
   allowedExtensionPaths:
-    100: 'EXT:cpkm/Resources/Private/Forms/'
-  allowSaveToExtensionPaths: false
-  allowDeleteFromExtensionPaths: false
-
+    110: 'EXT:cpkm/Resources/Private/Forms/'
