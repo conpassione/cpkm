@@ -1,52 +1,52 @@
-identifier: membership-applicationd-cpkm
-label: Mitgliedschaftsantragsformular
+identifier: membership-applicationf-cpkm
+label: "CSBP Formulaire d'adhésion"
 type: Form
 prototypeName: standard
 renderingOptions:
-  submitButtonLabel: Absenden
+  submitButtonLabel: Evoyer
 finishers:
   - identifier: EmailToSender
     options:
-      subject: 'Bestätigungsmail Mitgliedschaftsantrag'
+      subject: "Courriel de confirmation d'adhésion"
       recipients:
         '{email}': '{lastname} {firstname}'
       senderAddress: 'info@csbp.ch'
       senderName: 'Club Suisse du Berger des Pyrénées'
       addHtmlPart: true
       attachUploads: false
-      title: 'Mitgliedschaftsantrag'
+      title: "Demande d'adhésion"
   - identifier: EmailToReceiver
     options:
-      subject: 'Mitgliedschaftsantrag von {lastname} {firstname}'
+      subject: "Demande d'adhésion de {lastname} {firstname}"
       recipients:
         info@csbp.ch: 'Club Suisse du Berger des Pyrénées'
       senderAddress: '{email}'
       senderName: '{lastname} {firstname}'
       addHtmlPart: true
       attachUploads: false
-      title: 'Mitgliedschaftsantrag via Website von {firstname} {lastname}'
+      title: "Demande d'adhésion via site internet de {firstname} {lastname}"
   - identifier: Confirmation
     options:
-      message: 'Besten Dank für Deine Anmeldung. Wir werden uns innerhalb einer Woche bei Ihnen melden.'
+      message: "Merci pour ta demande. Tu recevras une réponse de notre part dans un délai d'une semaine."
       contentElementUid: ''
 
 renderables:
   - renderingOptions:
-      previousButtonLabel: 'Vorherige Seite'
-      nextButtonLabel: 'Nächster Seite'
+      previousButtonLabel: 'Page précédente'
+      nextButtonLabel: 'Page suivante'
     type: Page
     identifier: page-1
-    label: Hauptmitglied
+    label: 'Membre principal'
     renderables:
       - properties:
           options:
             - '---'
-            - 'Herr'
-            - 'Frau'
-          elementDescription: 'Bitte Anrede wählen'
+            - 'Monsieur'
+            - 'Madame'
+          elementDescription: 'Veuillez choisir une formule de politesse'
         identifier: salutation
         type: SingleSelect
-        label: 'Anrede'
+        label: 'Titre'
         defaultValue: 0
       - type: GridRow
         identifier: gridrow-2
@@ -55,28 +55,28 @@ renderables:
           - defaultValue: ''
             type: Text
             identifier: lastname
-            label: 'Name'
+            label: 'Nom'
             properties:
-              elementDescription: 'Nachname des Mitgliedes'
+              elementDescription: 'Nom du membre'
               fluidAdditionalAttributes:
                 required: required
                 placeholder: ''
               validationErrorMessages:
                 - code: 1238110957
-                  message: 'Bitte Name erfassen'
+                  message: 'Veuillez saisir le nom'
             validators:
               - identifier: NotEmpty
           - defaultValue: ''
             type: Text
             identifier: firstname
-            label: 'Vorname'
+            label: 'Prénom'
             properties:
-              elementDescription: 'Vorname des Mitgliedes'
+              elementDescription: 'prénom du membre'
               fluidAdditionalAttributes:
                 required: required
               validationErrorMessages:
                 - code: 1221560910
-                  message: 'Bitte Vorname ausfüllen'
+                  message: 'Veuillez saisir le prénom'
             validators:
               - identifier: NotEmpty
       - defaultValue: ''
@@ -90,11 +90,11 @@ renderables:
           - defaultValue: ''
             identifier: zipcode
             type: Text
-            label: PLZ
+            label: CP
           - defaultValue: ''
             identifier: city
             type: Text
-            label: Ort
+            label: Lieu
       - type: GridRow
         identifier: gridrow-4
         label: 'Grid: Zeile'
@@ -102,28 +102,28 @@ renderables:
           - defaultValue: ''
             type: Text
             identifier: mobile
-            label: Mobiltelefon
+            label: 'Télephone portable'
             properties:
               elementDescription: ''
           - defaultValue: ''
             type: Text
             identifier: email
-            label: E-Mail
+            label: 'Courielle électronique'
             properties:
               fluidAdditionalAttributes:
                 required: required
               validationErrorMessages:
                 - code: 1221559976
-                  message: 'Die E-Mail ist für die Kommunikation nötig, bitte gültige E-Mail erfassen.'
+                  message: "L'e-mail est nécessaire pour la communication, veuillez saisir un e-mail valide."
             validators:
               - identifier: EmailAddress
               - identifier: NotEmpty
   - renderingOptions:
-      previousButtonLabel: 'Vorherige Seite'
-      nextButtonLabel: 'Nächste Seite'
+      previousButtonLabel: 'Page précédente'
+      nextButtonLabel: 'Page suivante'
     type: Page
     identifier: page-2
-    label: 'Partnermitglied'
+    label: 'Membre associé'
     renderables:
       - type: GridRow
         identifier: gridrow-21
@@ -132,15 +132,15 @@ renderables:
           - defaultValue: ''
             type: Text
             identifier: lastname2
-            label: Name
+            label: 'Nom'
             properties:
-              elementDescription: 'Name des Partnermitgliedes'
+              elementDescription: "Nom de l'associé"
           - defaultValue: ''
             type: Text
             identifier: firstname2
-            label: Vorname
+            label: 'Prénom'
             properties:
-              elementDescription: 'Vorname des Partnermitgliedes'
+              elementDescription: "Prénom de l'associé"
       - type: GridRow
         identifier: gridrow-24
         label: 'Grid: Zeile'
@@ -148,34 +148,34 @@ renderables:
           - defaultValue: ''
             type: Text
             identifier: mobile2
-            label: Mobiltelefon
+            label: 'Télephone portable'
             properties:
               elementDescription: ''
           - defaultValue: ''
             type: Text
             identifier: email2
-            label: E-Mail
+            label: 'Courielle électronique'
             properties:
               validationErrorMessages:
                 - code: 1221559976
-                  message: 'Die E-Mail ist für die Kommunikation nötig, bitte gültige E-Mail erfassen.'
+                  message: "L'e-mail est nécessaire pour la communication, veuillez saisir un e-mail valide."
             validators:
               - identifier: EmailAddress
       - properties:
-          text: 'Die folgenden Angaben werden benötigt um Sie als Clubmitglied mit den korrekten Informationen zu beliefern.'
+          text: 'Les informations suivantes sont nécessaires pour vous fournir les informations correctes en tant que membre du club.'
         type: StaticText
         identifier: statictext-1
-        label: Zusatzinformationen
+        label: 'Informations supplémentaires'
       - type: Checkbox
         identifier: confirmation
-        label: 'Ich bin einverstanden, dass die erfassten Daten für die Zwecke des Club verwendet und im Mitgliederverzeichnis der SKG aufgeführt werden.'
+        label: "J'accepte que les données saisies soient utilisées pour les besoins du club et qu'elles figurent dans la liste des membres de la SCS."
         properties:
           elementDescription: ''
           fluidAdditionalAttributes:
             required: required
           validationErrorMessages:
             - code: 1221560910
-              message: 'Bitte Verwendung der Daten zustimmen.'
+              message: "Veuillez autoriser l'utilisation des données."
         validators:
           - identifier: NotEmpty
       - type: GridRow
@@ -186,12 +186,12 @@ renderables:
               options:
                 deutsch: deutsch
                 francais: français
-              elementDescription: 'Wählen Sie die Korresponenzsprache aus.'
+              elementDescription: 'Choisissez la langue de correspondance.'
               fluidAdditionalAttributes:
                 required: required
             type: RadioButton
             identifier: comlanguage
-            label: Korrespondenzsprache
+            label: 'Lange de correspondance'
             defaultValue: deutsch
             validators:
               - identifier: NotEmpty
@@ -199,19 +199,19 @@ renderables:
               options:
                 'Schweizer HUND': 'Schweizer HUND'
                 'Cynologie Romand': 'Cynologie Romand'
-                'Abo über anderen Verein': 'Abo über andern Verein'
-              elementDescription: 'Wählen Sie die offizielle Zeitschrift aus'
+                'Abo über anderen Verein': 'Abo via un autre club'
+              elementDescription: 'Choisissez la revue officielle'
               fluidAdditionalAttributes:
                 required: required
             type: RadioButton
             identifier: officialpaper
-            label: 'Offizielle Zeitschrift'
+            label: 'Revue officielle'
             defaultValue: 'Schweizer HUND'
             validators:
               - identifier: NotEmpty
   - renderingOptions:
-      previousButtonLabel: 'Vorherige Seite'
-      nextButtonLabel: 'Nächste Seite'
+      previousButtonLabel: 'Page précédente'
+      nextButtonLabel: 'Page suivante'
     type: SummaryPage
     identifier: summarypage-1
-    label: Zusammenfassung
+    label: Résumé

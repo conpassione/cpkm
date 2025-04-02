@@ -1,0 +1,29 @@
+@use '../settings/settings' as *;
+
+@layer cpkmstyles {
+
+  .form-h2 {
+    color: var(--clr-h);
+    font-size: 110%;
+  }
+
+  .form-control {
+    color: var(--clr-input);
+    background-color: var(--clr-input--bg);
+  }
+
+  input, textarea, select {
+    &:focus-visible {
+      outline: 1px solid var(--clr-text);
+    }
+  }
+
+  .form-group:has(input[readonly=readonly]) {
+    .form-control {
+      padding-inline: 0;
+      background-color: transparent;
+      color: var(--clr-brand--primary);
+      font-weight: var(--fw-bold);
+    }
+  }
+}

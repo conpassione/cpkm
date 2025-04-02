@@ -1,5 +1,5 @@
 /* settings */
-@layer cpmk {
+@layer cpkm {
   @font-face {
     font-family: "Oxygen";
     src: url("../Fonts/Oxygen/Oxygen-Light.woff2") format("woff2");
@@ -29,6 +29,35 @@
     --ff-nav: "Oxygen";
     --ff-mono: "UbuntuMono";
     --ff-symbol: "Symbols";
+  }
+}
+@layer cpkmstyles {
+  .form-h2 {
+    color: var(--clr-h);
+    font-size: 110%;
+  }
+  .form-control {
+    color: var(--clr-input);
+    background-color: var(--clr-input--bg);
+  }
+  input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: 1px solid var(--clr-text);
+  }
+  .form-group:has(input[readonly=readonly]) .form-control {
+    padding-inline: 0;
+    background-color: transparent;
+    color: var(--clr-brand--primary);
+    font-weight: var(--fw-bold);
+  }
+}
+/* page */
+@layer cpkmstyles {
+  .logo {
+    background-color: var(--clr-headerbg);
+    width: min(150px, 20vw);
+    left: 1rem;
+    grid-column: 1;
+    border-radius: var(--border-radius);
   }
 }
 
