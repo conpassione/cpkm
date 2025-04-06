@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en" target-language="it" original="locallang_db.xlf" datatype="plaintext" product-name="conpassione/cpkm" date="2025-02-25T19:11:25+01:00">
+	<file source-language="en" target-language="it" original="locallang_db.xlf" datatype="plaintext" product-name="conpassione/cpkm" date="2025-04-06T19:33:04+02:00">
 		<header></header>
 		<body>
+			<trans-unit id="backendlayout.eventpage.title">
+				<source>Event Page</source>
+				<target>Pagina Evento</target>
+			</trans-unit>
 			<trans-unit id="extname">
 				<source>Kennel Management</source>
 				<target>Amministrazione dell&#39;allevamento</target>

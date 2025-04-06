@@ -1,0 +1,41 @@
+name: conpassione/eventpage
+typeName: 36650021
+title: Eventpage
+group: conpassione
+description: Seite mit Informationen zu einem Event wie Datum, Beschrieb, Bericht, Bilder
+prefixFields: false
+fields:
+  - identifier: subtitle
+    useExistingField: true
+  - identifier: eventinfos
+    type: Palette
+    label: Event-Info
+    fields:
+      - identifier: cp_bdate
+        type: DateTime
+        format: datetime
+        label: Begins at
+      - identifier: cp_edate
+        type: DateTime
+        format: datetime
+        label: Ends at
+      - identifier: lb1
+        type: Linebreak
+      - identifier: cp_location
+        type: Text
+        label: address
+      - identifier: cp_zip
+        type: Text
+        label: ZIP
+      - identifier: cp_city
+        type: Text
+        label: City
+      - identifier: lb2
+        type: Linebreak
+      - identifier: cp_teaser
+        type: Textarea
+        rows: 6
+        enableRichtext: true
+        label: Teaser
+
+

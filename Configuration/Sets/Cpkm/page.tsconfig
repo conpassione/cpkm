@@ -1,0 +1,2 @@
+@import 'EXT:cpkm/Configuration/TsConfig/Page/PageLayout/*.tsconfig'
+@import 'EXT:cpkm/Configuration/TsConfig/Page/*.tsconfig'

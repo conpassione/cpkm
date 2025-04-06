@@ -1,0 +1,39 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+
+<f:asset.css href="{cb:assetPath()}/frontend.css" identifier="eventlist-css"/>
+
+<div class="eventlist" id="eventlist{data.uid}">
+    <f:cObject
+        data="{data}"
+        table="tt_content"
+        typoscriptObjectPath="tt_content.header"
+    />
+    <div class="eventcards">
+        <f:for as="event" each="{eventlist}">
+            <div class="eventcard" id="event{event.data.uid}">
+                <f:link.page pageUid="{event.data.uid}">
+                    <div class="eventdate">
+                        <time datetime="{page.pagerecord.cp_bdate -> f:format.date(format: 'Y-M-d')}">
+                            <span class="eventdate--day"><f:format.date format="d.m">{event.data.cp_bdate}</f:format.date></span>
+                            <br>
+                            <span class="eventdate--year"><f:format.date format="Y">{event.data.cp_bdate}</f:format.date></span>
+                            <br>
+                        </time>
+                    </div>
+                    <div class="eventinfo">
+                        <h3 class="eventtitle">
+                            <f:format.html>{event.data.subtitle}</f:format.html>
+                            - {event.data.cp_city}
+                        </h3>
+                        <div class="eventteaser">
+                            <f:format.html>{event.data.cp_teaser}</f:format.html>
+                            <p>Mehr Infos...</p>
+                        </div>
+                    </div>
+                </f:link.page>
+            </div>
+        </f:for>
+    </div>
+</div>

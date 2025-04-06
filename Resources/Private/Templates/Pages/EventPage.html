@@ -1,0 +1,70 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="Eventlayout-{page.pagerecord.layout}"/>
+
+
+<f:section name="Main">
+    <f:asset.script identifier="event" src="EXT:cpkm/Resources/Public/JavaScript/Events.js"/>
+    <f:render arguments="{hero: pagecontent.hero, pageTitle: page.pagerecord.subtitle}" partial="Herosmall"/>
+
+    <f:render arguments="{_all}" partial="Menu/BreadcrumbMenu"/>
+
+    <div class="event" data-id="{settings.eventPid}">
+        <div class="eventdate">
+            <time datetime="{page.pagerecord.cp_bdate -> f:format.date(format: 'Y-M-d')}">
+                <span class="eventdate--day"><f:format.date format="d.m">{page.pagerecord.cp_bdate}</f:format.date></span>
+                <br>
+                <span class="eventdate--year"><f:format.date format="Y">{page.pagerecord.cp_bdate}</f:format.date></span>
+                <br>
+            </time>
+        </div>
+        <div class="eventinfo">
+            <h2 class="h3 eventtitle">
+                <f:format.html>{page.pagerecord.nav_title}</f:format.html>
+                - {page.pagerecord.cp_city}
+            </h2>
+            <f:format.html>{page.pagerecord.cp_teaser}</f:format.html>
+            <div class="eventschedule">
+                <p>Beginn:
+                    <time datetime="{page.pagerecord.cp_bdate -> f:format.date(format: 'Y-M-d')}">
+                        <f:format.date format="d.m.Y H:i">{page.pagerecord.cp_bdate}</f:format.date>
+                    </time>
+                    &nbsp;-&nbsp;Ende:
+                    <time datetime="{page.pagerecord.cp_edate -> f:format.date(format: 'Y-M-d')}">
+                        <f:format.date format="d.m.Y H:i">{page.pagerecord.cp_edate}</f:format.date>
+                    </time>
+                </p>
+                <p>Ort: {page.pagerecord.cp_location}, {page.pagerecord.cp_zip}&nbsp;{page.pagerecord.cp_city}
+                    <span>  >>  </span>
+                    <a class="url-link--icon"
+                       href="https://www.google.ch/maps/search/{page.pagerecord.cp_location -> f:split(separator=' ') -> f:join(separator='+')}+{page.pagerecord.cp_zip}+{page.pagerecord.cp_city}"
+                       target="_blank">GoogleMaps
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="eventinfo">
+            <f:if condition="{referer}">
+                <a href="{referer}"><span class="button iconfont">back</span></a>
+            </f:if>
+            <f:if condition="{prevNavigation}">
+                <f:link.page pageUid="{prevNavigation.0.data.uid}"><span class="button iconfont">left</span>&nbsp;</f:link.page>
+            </f:if>
+            <f:if condition="{upNavigation}">
+                <f:link.page pageUid="{upNavigation.0.data.uid}"><span class="button iconfont">up</span>&nbsp;</f:link.page>
+            </f:if>
+            <f:if condition="{nextNavigation}">
+                <f:link.page pageUid="{nextNavigation.0.data.uid}"><span class="button iconfont">right</span></f:link.page>
+            </f:if>
+        </div>
+    </div>
+    <f:for as="contentelement" each="{pagecontent.content.records}">
+        <f:cObject
+            data="{contentelement.rawRecord}"
+            table="tt_content"
+            typoscriptObjectPath="tt_content.{contentelement.CType}"
+        />
+    </f:for>
+</f:section>
+
+</html>

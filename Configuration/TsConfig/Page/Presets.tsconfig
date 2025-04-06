@@ -1,0 +1,8 @@
+mod.web_list.downloadPresets {
+  tx_conpassione_staff {
+    77 {
+      label = Test Preset for pages
+      columns = function,responsibility,feuser
+    }
+  }
+}

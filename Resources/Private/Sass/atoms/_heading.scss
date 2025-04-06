@@ -1,0 +1,11 @@
+/* headings */
+
+@use '../settings' as *;
+
+@layer cpkmstyles {
+
+  .h2 {
+    border-bottom: 0.1em solid var(--clr-h--border);
+  }
+
+}

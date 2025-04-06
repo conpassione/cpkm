@@ -1,5 +1,5 @@
 /* settings */
-@layer cpkm {
+@layer cpkmstyles {
 
    @font-face {
     font-family:  'Oxygen';
@@ -26,12 +26,12 @@
   }
 
    :root {
-    --ff:                 'Oxygen';
+    --ff:                 'Oxygen', 'system-ui', 'sans-serif';
     --ff-condensed:       'UbuntuCondensed';
-    --ff-serif:           'Oxygen';
-    --ff-h:               'Oxygen';
-    --ff-nav:             'Oxygen';
-    --ff-mono:            'UbuntuMono';
+    --ff-serif:           'Oxygen', 'system-ui', 'sans-serif';
+    --ff-h:               'Oxygen', 'system-ui', 'sans-serif';
+    --ff-nav:             'Oxygen', 'system-ui', 'sans-serif';
+    --ff-mono:            'Nimbus Mono PS', 'Courier New', monospace;
     --ff-symbol:          'Symbols';
   }
 

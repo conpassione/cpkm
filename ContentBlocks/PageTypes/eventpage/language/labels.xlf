@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" original="Labels.xlf" datatype="plaintext" product-name="conpassione/eventpage" date="2025-03-27T00:49:33+01:00">
+		<header></header>
+		<body>
+			<trans-unit id="cp_bdate.label">
+				<source>Startdate</source>
+			</trans-unit>
+			<trans-unit id="cp_edate.label">
+				<source>Enddate</source>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Event definition and description</source>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Eventpage</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,58 @@
+name: conpassione/csbp-registrationform
+typeField: type
+typeName: csbp-registrationform
+title: 'Sport-Registration Item'
+table: tx_conpassione_registrationform
+prefixFields: false
+languageAware: false
+labelField:
+  - event
+  - sm-class
+  - lastname
+  - firstname
+  - mobile
+  - email
+  - dog
+security:
+  ignorePageTypeRestriction: true
+
+fields:
+  - identifier: lastname
+    type: Text
+    label: 'Name'
+    required: true
+  - identifier: firstname
+    type: Text
+    label: 'Vorname'
+  - identifier: mobile
+    type: Text
+    label: 'Mobile'
+  - identifier: email
+    type: Text
+    label: 'E-Mail'
+    required: true
+  - identifier: event
+    type: Text
+    label: 'Event'
+    required: true
+  - identifier: sm-message
+    type: Textarea
+    label: 'Message'
+    rows: 6
+    enableRichtext: true
+  - identifier: sm-class
+    type: Text
+    label: 'Class'
+  - identifier: sm-dog
+    type: Text
+    label: 'Dog'
+  - identifier: sm-breed
+    type: Text
+    label: 'Breed'
+  - identifier: sm-birthdate
+    type: DateTime
+    label: 'Birthdate'
+    format: date
+  - identifier: sm-skg
+    type: Checkbox
+    label: SKG-Mitglied

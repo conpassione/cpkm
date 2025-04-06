@@ -1,0 +1,126 @@
+/* cp_base:constants */
+
+@layer cpkmtyles {
+  /* Baseline Colors */
+  /* as css constants (light theme) */
+  :root {
+    --clr-bw-000:                   oklch(0 0 0);
+    --clr-bw-010:                   oklch(0.1 0 0);
+    --clr-bw-020:                   oklch(0.2 0 0);
+    --clr-bw-030:                   oklch(0.3 0 0);
+    --clr-bw-040:                   oklch(0.4 0 0);
+    --clr-bw-050:                   oklch(0.5 0 0);
+    --clr-bw-060:                   oklch(0.6 0 0);
+    --clr-bw-070:                   oklch(0.7 0 0);
+    --clr-bw-080:                   oklch(0.8 0 0);
+    --clr-bw-090:                   oklch(0.9 0 0);
+    --clr-bw-100:                   oklch(1 0 0);
+
+    --clr-success:                  oklch(0.5 0.12 150);
+    --clr-info:                     oklch(0.5 0.12 220);
+    --clr-error:                    oklch(0.5 0.12 0);
+
+    --clr-brand--primary:           oklch(0.6 0.061 62);
+    --clr-brand--secondary:         oklch(0.5 0.03 149);
+    --clr-brand--tertiary:          oklch(0.5 0.07 231);
+    --clr-brand--quaternary:        oklch(0.5 0.13 318);
+    --clr-branddimmed--primary:     oklch(from var(--clr-brand--primary) calc(l * .8) calc(c * .8) h);
+    --clr-branddimmed--secondary:   oklch(from var(--clr-brand--secondary) calc(l * .8) calc(c * .8) h);
+    --clr-branddimmed--tertiary:    oklch(from var(--clr-brand--tertiary) calc(l * .8) calc(c * .8) h);
+    --clr-branddimmed--quaternary:  oklch(from var(--clr-brand--quaternary) calc(l * .8) calc(c * .8) h);
+
+    /* ============================ */
+    /* Color Theme light            */
+    /* ============================ */
+
+    /* application colors */
+    --clr-text:                     var(--clr-bw-030);
+    --clr-background:               var(--clr-bw-100);
+    --clr-h:                        var(--clr-bw-050);
+    --clr-h--border:                var(--clr-brand--primary);
+    --clr-accent:                   var(--clr-brand--primary);
+
+    /* element colors */
+    --clr-list--marker:             var(--clr-brand--primary);
+    --clr-code--bg:                 var(--clr-bw-060);
+    --clr-code--bc:                 var(--clr-bw-030);
+    --clr-input:                    var(--clr-text);
+    --clr-input--bg:                var(--clr-bw-090);
+
+    /* buttons */
+    --clr-primarybtn--active:       var(--clr-bw-090);
+    --clr-primarybtn--hover:        var(--clr-bw-090);
+    --clr-primarybtnbg--active:     var(--clr-brand--primary);
+    --clr-primarybtnbg--hover:      var(--clr-bw-050);
+    --clr-primarybtnbg--disabled:   oklch(from var(--clr-primarybtn--active) calc(l * .75) c h);
+    --clr-primarybtn--border:       transparent;
+
+    --clr-secondarybtn--active:     var(--clr-bw-090);
+    --clr-secondarybtnbg--active:   var(--clr-brand--secondary);
+    --clr-secondarybtnbg--hover:    var(--clr-bw-050);
+    --clr-secondarybtnbg--disabled: oklch(from var(--clr-secondarybtnbg--active) calc(l * .75) c h);
+    --clr-secondarybtn--border:     transparent;
+
+    /* section colors */
+    --clr-headerbg:                 var(--clr-bw-070);
+    --clr-background-accent:        var(--clr-bw-090);
+    --clr-background-brandcolor:    oklch(from var(--clr-brand--primary) calc(l * 1.4) calc(c * 0.5) h);
+    --clr-footer-text:              var(--clr-bw-030);
+    --clr-footerbg:                 var(--clr-bw-070);
+    --clr-footer--border:           var(--clr-brand--primary);
+
+    /* menu colors */
+    --clr-mnu:                      var(--clr-bw-100);
+    --clr-mnu--active:              var(--clr-bw-100);
+    --clr-mnu--hover:               var(--clr-bw-100);
+    --clr-mnubg:                    var(--clr-headerbg);
+    --clr-mnubg--active:            var(--clr-bw-040);
+    --clr-mnubg--hover:             var(--clr-brand--primary);
+    --clr-mnumobile:                var(--clr-bw-000);
+    --clr-mnumobile--active:        var(--clr-bw-100);
+    --clr-mnumobile--hover:         var(--clr-bw-100);
+    --clr-mnumobilebg:              var(--clr-headerbg);
+    --clr-mnumobilebg--active:      var(--clr-bw-040);
+    --clr-mnumobilebg--hover:       var(--clr-brand--primary);
+
+    /* logo */
+    --clr-logo:                     var(--clr-bw-000);
+    --clr-logobg:                   var(--clr-bw-080);
+
+    /* cards */
+    --clr-card--accent:             var(--clr-brand--primary);
+
+    /* rte */
+    --clr-ckeditor--text:           var(--clr-bw-020);
+    --clr-ckeditor--bg:             var(--clr-bw-100);
+    --clr-ckeditor--endline:        var(--clr-info);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+
+      /* buttons */
+      --clr-primarybtn--active:    var(--clr-bw-075);
+      --clr-primarybtnbg--active:  var(--clr-brand--primary);
+      --clr-primarybtn--disabled:  oklch(from var(--clr-primarybtn--active) calc(l + .5) calc(c * 0.5) h);
+
+      --clr-input:                 var(--clr-bw-020);
+      --clr-input--bg:             var(--clr-bw-070);
+
+      /* typographic colors */
+      --clr-text:                  var(--clr-bw-090);
+      --clr-h:                     var(--clr-bw-080);
+      --clr-background:            var(--clr-bw-030);
+      --clr-background-accent:     var(--clr-bw-040);
+      --clr-background-brandcolor: oklch(from var(--clr-brand--primary) calc(l * .8) calc(c * 0.5) h);
+
+      --clr-footer-text:           var(--clr-bw-090);
+      --clr-footerbg:              var(--clr-bw-040);
+
+      /* rte */
+      --clr-ckeditor--text:        var(--clr-bw-080);
+      --clr-ckeditor--bg:          var(--clr-bw-020);
+      --clr-ckeditor--endline:     var(--clr-info);
+    }
+  }
+}

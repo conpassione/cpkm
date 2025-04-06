@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="it" original="Labels.xlf" datatype="plaintext" product-name="conpassione/csbp-registrationform" date="2025-04-03T22:26:11+02:00">
+		<header></header>
+		<body>
+			<trans-unit id="email.label">
+				<source>eMail</source>
+				<target>e-Mail</target>
+			</trans-unit>
+			<trans-unit id="event.label">
+				<source>Registration for Event</source>
+				<target>Registrazione per la Manifestazione</target>
+			</trans-unit>
+			<trans-unit id="firstname.label">
+				<source>Firstname</source>
+				<target>Prenome</target>
+			</trans-unit>
+			<trans-unit id="lastname.label">
+				<source>Lastname</source>
+				<target>Nome</target>
+			</trans-unit>
+			<trans-unit id="sm-birthdate.label">
+				<source>Birthdate</source>
+				<target>Data die nascita</target>
+			</trans-unit>
+			<trans-unit id="sm-breed.label">
+				<source>Breed</source>
+				<target>Razza</target>
+			</trans-unit>
+			<trans-unit id="sm-class.label">
+				<source>Class</source>
+				<target>Classe</target>
+			</trans-unit>
+			<trans-unit id="sm-dog.label">
+				<source>Dog</source>
+				<target>Cane</target>
+			</trans-unit>
+			<trans-unit id="sm-message.label">
+				<source>Message</source>
+				<target>Messagio</target>
+			</trans-unit>
+			<trans-unit id="sm-skg.label">
+				<source>I am SKG member</source>
+				<target>Sono membro della SCS</target>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Registration</source>
+				<target>Registrazione</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

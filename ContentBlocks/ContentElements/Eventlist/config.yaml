@@ -1,0 +1,20 @@
+name: conpassione/eventlist
+typeName: eventlist
+group: z-cpextensions
+prefixFields: false
+fields:
+  - identifier: conpassione/Header
+    type: Basic
+  - identifier: cp_max_items
+    type: Number
+    range:
+      lower: 0
+      upper: 20
+  - identifier: cp_pages
+    type: Relation
+    allowed: 'pages'
+    suggestOptions:
+      additionalSearchFields: 'nav_title'
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
