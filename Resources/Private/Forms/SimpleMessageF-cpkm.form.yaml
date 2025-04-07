@@ -94,7 +94,7 @@ renderables:
               message: "Veuillez autoriser l'utilisation des données."
         validators:
           - identifier: NotEmpty
-      - identifier: smrecinfo
+      - identifier: recinfo1
         properties:
           text: '* Champs obligatoires'
         type: StaticText

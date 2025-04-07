@@ -131,7 +131,7 @@ renderables:
               message: 'Bitte Verwendung der Daten zustimmen.'
         validators:
           - identifier: NotEmpty
-      - identifier: sm-recinfo
+      - identifier: recinfo1
         properties:
           text: '* Pflichtfelder'
         type: StaticText

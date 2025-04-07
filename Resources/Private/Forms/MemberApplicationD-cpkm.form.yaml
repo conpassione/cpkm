@@ -118,7 +118,7 @@ renderables:
             validators:
               - identifier: EmailAddress
               - identifier: NotEmpty
-      - identifier: smrecinfo
+      - identifier: recinfo1
         properties:
           text: '* Pflichtfelder'
         type: StaticText
@@ -214,7 +214,7 @@ renderables:
               message: 'Bitte Verwendung der Daten zustimmen.'
         validators:
           - identifier: NotEmpty
-      - identifier: smrecinfo
+      - identifier: recinfo2
         properties:
           text: '* Pflichtfelder'
         type: StaticText
