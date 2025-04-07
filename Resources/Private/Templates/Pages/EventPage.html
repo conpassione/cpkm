@@ -5,7 +5,7 @@
 
 <f:section name="Main">
     <f:asset.script identifier="event" src="EXT:cpkm/Resources/Public/JavaScript/Events.js"/>
-    <f:render arguments="{hero: pagecontent.hero, pageTitle: page.pagerecord.subtitle}" partial="Herosmall"/>
+    <f:render arguments="{hero: pagecontent.hero, pageTitle: page.pagerecord.nav_title}" partial="Herosmall"/>
 
     <f:render arguments="{_all}" partial="Menu/BreadcrumbMenu"/>
 
@@ -20,21 +20,20 @@
         </div>
         <div class="eventinfo">
             <h2 class="h3 eventtitle">
-                <f:format.html>{page.pagerecord.nav_title}</f:format.html>
-                - {page.pagerecord.cp_city}
+                <f:format.html>{page.pagerecord.subtitle}</f:format.html>
             </h2>
             <f:format.html>{page.pagerecord.cp_teaser}</f:format.html>
             <div class="eventschedule">
-                <p>Beginn:
+                <p><f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:event.start"/>:
                     <time datetime="{page.pagerecord.cp_bdate -> f:format.date(format: 'Y-M-d')}">
                         <f:format.date format="d.m.Y H:i">{page.pagerecord.cp_bdate}</f:format.date>
                     </time>
-                    &nbsp;-&nbsp;Ende:
+                    &nbsp;-&nbsp;&nbsp;<f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:event.end"/>:
                     <time datetime="{page.pagerecord.cp_edate -> f:format.date(format: 'Y-M-d')}">
                         <f:format.date format="d.m.Y H:i">{page.pagerecord.cp_edate}</f:format.date>
                     </time>
                 </p>
-                <p>Ort: {page.pagerecord.cp_location}, {page.pagerecord.cp_zip}&nbsp;{page.pagerecord.cp_city}
+                <p><f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:event.location"/>: {page.pagerecord.cp_location}, {page.pagerecord.cp_zip}&nbsp;{page.pagerecord.cp_city}
                     <span>  >>  </span>
                     <a class="url-link--icon"
                        href="https://www.google.ch/maps/search/{page.pagerecord.cp_location -> f:split(separator=' ') -> f:join(separator='+')}+{page.pagerecord.cp_zip}+{page.pagerecord.cp_city}"
@@ -43,7 +42,7 @@
                 </p>
             </div>
         </div>
-        <div class="eventinfo">
+        <div class="eventnav">
             <f:if condition="{referer}">
                 <a href="{referer}"><span class="button iconfont">back</span></a>
             </f:if>

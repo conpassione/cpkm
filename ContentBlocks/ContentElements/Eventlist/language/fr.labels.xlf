@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en" target-language="fr" original="Labels.xlf" datatype="plaintext" product-name="conpassione/homepage" date="2025-03-26T18:32:27+01:00">
+	<file source-language="en" target-language="fr" original="Labels.xlf" datatype="plaintext" product-name="conpassione/homepage" date="2025-04-07T11:46:40+02:00">
 		<header></header>
 		<body>
-			<trans-unit id="title">
-				<source>Eventlist</source>
-				<target>Liste des événements</target>
+			<trans-unit id="cp_archive.items.0.label">
+				<source>current</source>
+				<target>actuelles</target>
+			</trans-unit>
+			<trans-unit id="cp_archive.label">
+				<source>Type of entries</source>
+				<target>Type de la liste</target>
+			</trans-unit>
+			<trans-unit id="cp_max_items.label">
+				<source>Max Items in List</source>
+				<target>Nombre maximal d&#39;entrées</target>
 			</trans-unit>
 			<trans-unit id="description">
 				<source>List of Events</source>
+				<target>Liste des événements</target>
+			</trans-unit>
+			<trans-unit id="new.5">
+				<source>archived</source>
+				<target>archivées</target>
+			</trans-unit>
+			<trans-unit id="pages.label">
+				<source>Events from page</source>
+				<target>Événements de page</target>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Eventlist</source>
 				<target>Liste des événements</target>
 			</trans-unit>
 		</body>

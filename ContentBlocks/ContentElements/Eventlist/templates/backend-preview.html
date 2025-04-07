@@ -4,6 +4,8 @@
 
 <f:asset.css href="{cb:assetPath()}/backend-preview.css" identifier="cpevent-backend-preview"/>
 
-<p>
-    <f:translate key="{cb:languagePath()}:be.description"/>
+<p><f:translate key="{cb:languagePath()}:be.description"/><br>Veranstaltungen von Seite(n):<br>
+    <f:for each="{data.pages}" as="page">
+        [{page.uid}] {page.title}<br>
+    </f:for>
 </p>

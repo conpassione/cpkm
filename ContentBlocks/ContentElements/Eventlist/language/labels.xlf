@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en" original="Labels.xlf" datatype="plaintext" product-name="conpassione/cp-textblock" date="2025-03-26T18:32:27+01:00">
+	<file source-language="en" original="Labels.xlf" datatype="plaintext" product-name="conpassione/cp-textblock" date="2025-04-07T11:46:40+02:00">
 		<header></header>
 		<body>
-			<trans-unit id="title">
-				<source>Eventlist</source>
+			<trans-unit id="cp_archive.items.0.label">
+				<source>current</source>
+			</trans-unit>
+			<trans-unit id="cp_archive.label">
+				<source>Type of entries</source>
+			</trans-unit>
+			<trans-unit id="cp_max_items.label">
+				<source>Max Items in List</source>
 			</trans-unit>
 			<trans-unit id="description">
 				<source>List of Events</source>
+			</trans-unit>
+			<trans-unit id="new.5">
+				<source>archived</source>
+			</trans-unit>
+			<trans-unit id="pages.label">
+				<source>Events from page</source>
+			</trans-unit>
+			<trans-unit id="title">
+				<source>Eventlist</source>
 			</trans-unit>
 		</body>
 	</file>

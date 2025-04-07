@@ -7,10 +7,19 @@ fields:
     type: Basic
   - identifier: cp_max_items
     type: Number
+    defaultValue: 0
     range:
       lower: 0
-      upper: 20
-  - identifier: cp_pages
+      upper: 999
+  - identifier: cp_archive
+    type: Radio
+    defaultValue: 0
+    items:
+      - label: 'actuelle'
+        value: 0
+      - label: 'archivierte'
+        value: 1
+  - identifier: pages
     type: Relation
     allowed: 'pages'
     suggestOptions:

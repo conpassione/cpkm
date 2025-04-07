@@ -118,6 +118,11 @@ renderables:
             validators:
               - identifier: EmailAddress
               - identifier: NotEmpty
+      - identifier: recinfo1
+        properties:
+          text: '* Champs obligatoires'
+        type: StaticText
+        label: ''
   - renderingOptions:
       previousButtonLabel: 'Page précédente'
       nextButtonLabel: 'Page suivante'
@@ -166,18 +171,6 @@ renderables:
         type: StaticText
         identifier: statictext-1
         label: 'Informations supplémentaires'
-      - type: Checkbox
-        identifier: confirmation
-        label: "J'accepte que les données saisies soient utilisées pour les besoins du club et qu'elles figurent dans la liste des membres de la SCS."
-        properties:
-          elementDescription: ''
-          fluidAdditionalAttributes:
-            required: required
-          validationErrorMessages:
-            - code: 1221560910
-              message: "Veuillez autoriser l'utilisation des données."
-        validators:
-          - identifier: NotEmpty
       - type: GridRow
         identifier: gridrow-1
         label: 'Grid: Zeile'
@@ -209,6 +202,23 @@ renderables:
             defaultValue: 'Schweizer HUND'
             validators:
               - identifier: NotEmpty
+      - type: Checkbox
+        identifier: confirmation
+        label: "J'accepte que les données saisies soient utilisées pour les besoins du club et qu'elles figurent dans la liste des membres de la SCS."
+        properties:
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            - code: 1221560910
+              message: "Veuillez autoriser l'utilisation des données."
+        validators:
+          - identifier: NotEmpty
+      - identifier: recinfo2
+        properties:
+          text: '* Champs obligatoires'
+        type: StaticText
+        label: ''
   - renderingOptions:
       previousButtonLabel: 'Page précédente'
       nextButtonLabel: 'Page suivante'

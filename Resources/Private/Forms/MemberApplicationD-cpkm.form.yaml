@@ -118,6 +118,11 @@ renderables:
             validators:
               - identifier: EmailAddress
               - identifier: NotEmpty
+      - identifier: smrecinfo
+        properties:
+          text: '* Pflichtfelder'
+        type: StaticText
+        label: ''
   - renderingOptions:
       previousButtonLabel: 'Vorherige Seite'
       nextButtonLabel: 'Nächste Seite'
@@ -166,18 +171,6 @@ renderables:
         type: StaticText
         identifier: statictext-1
         label: Zusatzinformationen
-      - type: Checkbox
-        identifier: confirmation
-        label: 'Ich bin einverstanden, dass die erfassten Daten für die Zwecke des Club verwendet und im Mitgliederverzeichnis der SKG aufgeführt werden.'
-        properties:
-          elementDescription: ''
-          fluidAdditionalAttributes:
-            required: required
-          validationErrorMessages:
-            - code: 1221560910
-              message: 'Bitte Verwendung der Daten zustimmen.'
-        validators:
-          - identifier: NotEmpty
       - type: GridRow
         identifier: gridrow-1
         label: 'Grid: Zeile'
@@ -209,6 +202,23 @@ renderables:
             defaultValue: 'Schweizer HUND'
             validators:
               - identifier: NotEmpty
+      - type: Checkbox
+        identifier: confirmation
+        label: 'Ich bin einverstanden, dass die erfassten Daten für die Zwecke des Club verwendet und im Mitgliederverzeichnis der SKG aufgeführt werden.'
+        properties:
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            - code: 1221560910
+              message: 'Bitte Verwendung der Daten zustimmen.'
+        validators:
+          - identifier: NotEmpty
+      - identifier: smrecinfo
+        properties:
+          text: '* Pflichtfelder'
+        type: StaticText
+        label: ''
   - renderingOptions:
       previousButtonLabel: 'Vorherige Seite'
       nextButtonLabel: 'Nächste Seite'

@@ -82,6 +82,18 @@ renderables:
         defaultValue: ''
         type: Textarea
         label: 'Mitteilung'
+      - type: Checkbox
+        identifier: confirmation
+        label: 'Ich bin einverstanden, dass die erfassten Daten für die Zwecke der Veranstaltung verwendet werden.'
+        properties:
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            - code: 1221560910
+              message: 'Bitte Verwendung der Daten zustimmen.'
+        validators:
+          - identifier: NotEmpty
       - identifier: smrecinfo
         properties:
           text: '* Pflichtfelder'
