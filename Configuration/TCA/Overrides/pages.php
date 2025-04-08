@@ -12,13 +12,6 @@ call_user_func(static function(): void {
 
     // zusätzliche Icons für Folder-Seiten
     $GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] = [
-        'label' => 'LLL:EXT:cpkm/Resources/Private/Language/locallang_db.xlf:pages.label.event',
-        'icon' => 'tx-conpassione-event',
-        'value' => 'event'
-    ];
-    $GLOBALS['TCA']['pages']['ctrl']['typeicon_classes']['contains-event'] = 'tx-conpassione-event';
-
-    $GLOBALS['TCA']['pages']['columns']['module']['config']['items'][] = [
         'label' => 'LLL:EXT:cpkm/Resources/Private/Language/locallang_db.xlf:pages.label.kennel',
         'icon' => 'tx-conpassione-kennel',
         'value' => 'kennel'

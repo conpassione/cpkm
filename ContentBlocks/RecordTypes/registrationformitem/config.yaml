@@ -1,6 +1,6 @@
-name: conpassione/csbp-registrationform
+name: conpassione/cpkm-registrationform
 typeField: type
-typeName: csbp-registrationform
+typeName: cpkm-registrationform
 title: 'Sport-Registration Item'
 table: tx_conpassione_registrationform
 prefixFields: false

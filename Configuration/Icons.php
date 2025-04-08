@@ -12,6 +12,11 @@ return [
         'source' => 'EXT:cpkm/Resources/Public/Icons/Event.svg',
     ],
 
+    'tx-conpassione-backendlayout-eventpage' => [
+      'provider' => SvgIconProvider::class,
+      'source' => 'EXT:cpkm/Resources/Public/Icons/Event.svg',
+    ],
+
     'tx-conpassione-kennel' => [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:cpkm/Resources/Public/Icons/Kennel.svg',

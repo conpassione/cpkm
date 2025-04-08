@@ -34,6 +34,8 @@ finishers:
           value: '{__currentTimestamp}'
         pid:
           value: '{eventpid}'
+        type:
+          value: 'cpkm-registrationform'
       elements:
         lastname:
           mapOnDatabaseColumn: 'lastname'

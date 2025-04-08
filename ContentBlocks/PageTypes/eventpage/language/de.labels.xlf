@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en" target-language="de" original="Labels.xlf" datatype="plaintext" product-name="conpassione/eventpage" date="2025-03-27T00:49:33+01:00">
+	<file source-language="en" target-language="de" original="Labels.xlf" datatype="plaintext" product-name="conpassione/eventpage" date="2025-04-08T17:09:11+02:00">
 		<header></header>
 		<body>
 			<trans-unit id="cp_bdate.label">
 				<source>Startdate</source>
 				<target>Beginnt um</target>
 			</trans-unit>
+			<trans-unit id="cp_city.label">
+				<source>City</source>
+				<target>Ort</target>
+			</trans-unit>
 			<trans-unit id="cp_edate.label">
 				<source>Enddate</source>
 				<target>Endet um</target>
+			</trans-unit>
+			<trans-unit id="cp_location.label">
+				<source>Address</source>
+				<target>Adresse</target>
+			</trans-unit>
+			<trans-unit id="cp_teaser.label">
+				<source>Teaser</source>
+				<target>Kurzbeschrieb</target>
+			</trans-unit>
+			<trans-unit id="cp_zip.label">
+				<source>ZIP</source>
+				<target>Postleitzahl PLZ</target>
 			</trans-unit>
 			<trans-unit id="description">
 				<source>Event definition and description</source>
