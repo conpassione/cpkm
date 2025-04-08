@@ -5,8 +5,8 @@ tt_content.kennellist {
       table = tx_cpkm_domain_model_kennel
       orderBy = k_name
       pidInList.data = field : l_page
-      #where = '({#tx_cpkm_domain_model_pedigree}.{#pid} = ###REC_FIELD_l_page###) AND ({#tx_cpkm_domain_model_pedigree}.{#p_status} = 2) AND ({#tx_cpkm_domain_model_pedigree}.{#p_sex} = 1)'
-      where = (k_status = 1) AND (k_show = 1)
+      where.data = field: cp_archive
+      where.wrap = ({#k_status} = |) AND ({#k_show} = 1)
       as = kennels
     }
   }

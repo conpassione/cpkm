@@ -6,6 +6,14 @@ prefixFields: false
 fields:
   - identifier: conpassione/Header
     type: Basic
+  - identifier: cp_archive
+    type: Radio
+    defaultValue: 1
+    items:
+      - label: 'archivierte'
+        value: 0
+      - label: 'actuelle'
+        value: 1
   - identifier: l_page
     type: Select
     renderType: selectSingle
