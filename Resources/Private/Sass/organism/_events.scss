@@ -1,0 +1,75 @@
+
+
+@layer eventstyles {
+  .eventlist {
+    min-width: 320px;
+  }
+
+  .eventcards {
+    margin-block-end: var(--gutter);
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .event {
+    margin-block-start: var(--gutter);
+  }
+
+  .eventinfo {
+    margin-left: 110px;
+    padding-inline: var(--gutter);
+    min-height: 110px;
+  }
+
+  .eventnav {
+    margin-left: 110px;
+    padding-inline: var(--gutter);
+  }
+
+  .eventcard {
+    border: 1px solid var(--clr-brand--primary);
+    margin-bottom: var(--gutter);
+
+    .eventinfo {
+      padding-block: calc(var(--gutter) / 2);
+    }
+  }
+
+  .eventdate {
+    float: left;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding: calc(var(--gutter) / 2);
+    color: var(--clr-bw-090);
+    background-color: var(--clr-brand--primary);
+    text-align: center;
+    width: 110px;
+    height: 110px;
+
+    .eventdate--day {
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-big);
+    }
+
+    .eventdate--month,
+    .eventdate--year {
+      font-size: calc(var(--fs-small) * 0.75);
+    }
+  }
+
+  .eventtitle {
+    font-weight: var(--fw-bold);
+  }
+
+  .eventteaser {
+    //padding-block-end: 0;
+  }
+
+  .eventschedule {
+    padding-block: var(--gutter);
+  }
+}
+
