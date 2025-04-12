@@ -10,8 +10,7 @@
             <f:then>
                 <f:variable name="variety">{licdogs.0.data.p_variety}</f:variable>
                 <f:for as="dog" each="{licdogs}" iteration="i-licdogs">
-                    <f:if condition="({variety} == {dog.data.p_variety}) && ({i-licdogs.index} == 0) "><h2 class="h2 licdogs--devider">Museau Normal</h2></f:if>
-                    <f:if condition="({variety} == {dog.data.p_variety}) && ({i-licdogs.index} > 0) "></f:if>
+                    <f:if condition="({variety} == {dog.data.p_variety}) && ({i-licdogs.index} == 0) "><h2 class="h2 licdogcard--devider">Museau Normal</h2></f:if>
                     <f:if condition="({variety} != {dog.data.p_variety})"><h2 class="h2 licdogcard--devider">Face Rase</h2>
                         <f:variable name="variety">{dog.data.p_variety}</f:variable>
                     </f:if>
