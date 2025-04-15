@@ -27,7 +27,7 @@ finishers:
       title: 'Mitgliedschaftsantrag via Website von {firstname} {lastname}'
   - identifier: Confirmation
     options:
-      message: 'Besten Dank für Deine Anmeldung. Wir werden uns innerhalb einer Woche bei Ihnen melden.'
+      message: 'Besten Dank für Ihre Anmeldung. Wir werden uns innerhalb einer Woche bei Ihnen melden.'
       contentElementUid: ''
 
 renderables:

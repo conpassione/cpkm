@@ -27,7 +27,7 @@ finishers:
       title: "Demande d'adhésion via site internet de {firstname} {lastname}"
   - identifier: Confirmation
     options:
-      message: "Merci pour ta demande. Tu recevras une réponse de notre part dans un délai d'une semaine."
+      message: "Merci pour la demande. Vous recevrez une réponse de notre part dans un délai d'une semaine."
       contentElementUid: ''
 
 renderables:
