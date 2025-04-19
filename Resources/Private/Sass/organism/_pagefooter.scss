@@ -1,0 +1,10 @@
+/* page */
+@use '../settings' as *;
+
+
+@layer cpkmstyle {
+  footer {
+    margin-block-start: var(--gutter);
+  }
+}
+
