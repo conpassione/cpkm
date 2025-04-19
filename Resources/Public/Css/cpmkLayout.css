@@ -168,7 +168,7 @@
 @layer cpkmstyles {
   .logo {
     background-color: var(--clr-headerbg);
-    width: clamp(150px, 18vw, 300px);
+    width: clamp(120px, 13vw, 350px);
     left: 1rem;
     grid-column: 1;
     border-radius: var(--border-radius);

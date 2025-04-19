@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en" original="Labels.xlf" datatype="plaintext" product-name="conpassione/cp-textblock" date="2025-04-08T14:43:56+02:00">
+	<file source-language="en" original="Labels.xlf" datatype="plaintext" product-name="conpassione/cp-textblock" date="2025-04-15T16:43:21+02:00">
 		<header></header>
 		<body>
 			<trans-unit id="cp_archive.items.0.label">
-				<source>current</source>
-			</trans-unit>
-			<trans-unit id="cp_archive.items.0.label">
-				<source>archived</source>
+				<source>activs</source>
 			</trans-unit>
 			<trans-unit id="cp_archive.items.1.label">
-				<source>activs</source>
+				<source>archived</source>
 			</trans-unit>
 			<trans-unit id="cp_archive.label">
 				<source>Type of entries</source>

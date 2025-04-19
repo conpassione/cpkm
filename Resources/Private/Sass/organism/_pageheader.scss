@@ -7,7 +7,7 @@
   .logo {
     background-color: var(--clr-headerbg);
     //width: min(300px, 18vw);
-    width: clamp(150px, 18vw, 300px);
+    width: clamp(120px, 13vw, 350px);
     left: 1rem;
     grid-column: 1;
     border-radius: var(--border-radius);
