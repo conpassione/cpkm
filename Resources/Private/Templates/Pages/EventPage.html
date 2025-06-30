@@ -43,17 +43,24 @@
             </div>
         </div>
         <div class="eventnav">
-            <f:if condition="{referer}">
-                <a href="{referer}"><span class="button iconfont">back</span></a>
+            <f:if condition="{upNavigation}">
+                <f:link.page pageUid="{upNavigation.0.data.uid}"><span class="button iconfont">up</span></f:link.page>
             </f:if>
             <f:if condition="{prevNavigation}">
-                <f:link.page pageUid="{prevNavigation.0.data.uid}"><span class="button iconfont">left</span>&nbsp;</f:link.page>
-            </f:if>
-            <f:if condition="{upNavigation}">
-                <f:link.page pageUid="{upNavigation.0.data.uid}"><span class="button iconfont">up</span>&nbsp;</f:link.page>
+                <f:then>
+                    <f:link.page pageUid="{prevNavigation.0.data.uid}"><span class="button iconfont">left</span></f:link.page>
+                </f:then>
+                <f:else>
+                    <span class="button iconfont button--placeholder">&nbsp;</span>
+                </f:else>
             </f:if>
             <f:if condition="{nextNavigation}">
-                <f:link.page pageUid="{nextNavigation.0.data.uid}"><span class="button iconfont">right</span></f:link.page>
+                <f:then>
+                    <f:link.page pageUid="{nextNavigation.0.data.uid}"><span class="button iconfont">right</span></f:link.page>
+                </f:then>
+                <f:else>
+                    <span class="button iconfont button--placeholder">&nbsp;</span>
+                </f:else>
             </f:if>
         </div>
     </div>

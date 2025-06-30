@@ -1,0 +1,14 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:cb="http://typo3.org/ns/Friendsoftypo3/ContentBlocks/ViewHelpers">
+
+<f:asset.css identifier="eventpage-css" href="{cb:assetPath()}/backend.css"/>
+
+<div class="cp_eventdescription">
+    <h2><f:format.raw>{data.subtitle}</f:format.raw> in {data.cp_zip} {data.cp_city}</h2>
+    <f:format.date format="d.m.Y - H.i">{data.cp_bdate}</f:format.date> - <f:format.date format="d.m.Y - H.i">{data.cp_edate}</f:format.date>
+    <f:format.raw>{data.cp_teaser}</f:format.raw>
+
+</div>
+
+</html>

@@ -1,8 +1,14 @@
 mod.web_list.downloadPresets {
   tx_conpassione_staff {
     77 {
-      label = Test Preset for pages
-      columns = function,responsibility,feuser
+      label = Funktionärsliste
+      columns = function,responsibility
+    }
+  }
+  tx_conpassione_registrationform {
+    1 {
+      label = Anmeldedaten
+      columns = lastname,firstname,mobile,email,event,message
     }
   }
 }

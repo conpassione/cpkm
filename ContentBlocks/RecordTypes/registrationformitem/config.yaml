@@ -7,7 +7,7 @@ prefixFields: false
 languageAware: false
 labelField:
   - event
-  - sm-class
+  - class
   - lastname
   - firstname
   - mobile
@@ -35,24 +35,24 @@ fields:
     type: Text
     label: 'Event'
     required: true
-  - identifier: sm-message
+  - identifier: message
     type: Textarea
     label: 'Message'
     rows: 6
     enableRichtext: true
-  - identifier: sm-class
+  - identifier: class
     type: Text
     label: 'Class'
-  - identifier: sm-dog
+  - identifier: dog
     type: Text
     label: 'Dog'
-  - identifier: sm-breed
+  - identifier: breed
     type: Text
     label: 'Breed'
-  - identifier: sm-birthdate
+  - identifier: birthdate
     type: DateTime
     label: 'Birthdate'
     format: date
-  - identifier: sm-skg
+  - identifier: skg
     type: Checkbox
     label: SKG-Mitglied

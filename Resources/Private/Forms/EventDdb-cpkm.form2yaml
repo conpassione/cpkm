@@ -1,30 +1,30 @@
-identifier: simple-messagef-db-cpkm
-label: 'Formulaire de demande simple avec base de donées'
+identifier: plauschparcoursd-db-kvm
+label: "Formulaire d'inscription CSBP Event"
 type: Form
 prototypeName: standard
 renderingOptions:
-  submitButtonLabel: Envoyer
+  submitButtonLabel: Absenden
 finishers:
   - identifier: EmailToSender
     options:
-      subject: 'Confirmation'
+      subject: "Confirmation d' CSBP Anmeldung für {dog}"
       recipients:
         '{email}': '{lastname} {firstname}'
       senderAddress: 'info@csbp.ch'
-      senderName: 'CSBP'
+      senderName: 'Club Suisse du Berger des Pyrénées'
       addHtmlPart: true
       attachUploads: false
-      title: 'Ton demande'
+      title: 'Manifestation du CSBP - {dog}'
   - identifier: EmailToReceiver
     options:
-      subject: 'Demande de {lastname} {firstname}'
+      subject: 'Inscription CSBP Event {lastname} {firstname} - {dog}'
       recipients:
-        info@csbp.ch: 'CSBP'
+        info@csbp.ch: 'Club Suisse du Berger des Pyrénées'
       senderAddress: '{email}'
       senderName: '{lastname} {firstname}'
       addHtmlPart: true
       attachUploads: false
-      title: 'Demande via site internet de {firstname} {lastname}'
+      title: 'Inscription CSBP Event via {firstname} {lastname} - {dog}'
   - identifier: SaveToDatabase
     options:
       table: 'tx_conpassione_registrationform'
@@ -35,7 +35,7 @@ finishers:
         pid:
           value: '{eventpid}'
         type:
-          value: 'cpkm-registrationform'
+          value: 'kvm-registrationform'
       elements:
         lastname:
           mapOnDatabaseColumn: 'lastname'
@@ -45,22 +45,32 @@ finishers:
           mapOnDatabaseColumn: 'mobile'
         email:
           mapOnDatabaseColumn: 'email'
-        sm-message:
-          mapOnDatabaseColumn: 'sm-message'
         event:
           mapOnDatabaseColumn: 'event'
+        dog:
+          mapOnDatabaseColumn: 'dog'
+        breed:
+          mapOnDatabaseColumn: 'breed'
+        birthdate:
+          mapOnDatabaseColumn: 'birthdate'
   - identifier: Confirmation
     options:
-      message: "Merci pour ta demande. Tu recevras une réponse de notre part dans un délai d'une semaine."
+      message: "Merci pour l'inscription."
       contentElementUid: ''
 renderables:
   - type: Page
     identifier: smpage-1
     renderables:
+      - identifier: info1
+        type: StaticText
+        label: ''
+        properties:
+          text: 'ATTENTION : une inscription par chien est nécessaire!'
+          elementClassAttribute: 'cp-accent cp-bold'
       - identifier: event
         defaultValue: 'ERROR: Unable to get Eventname'
         type: Text
-        label: 'Inscription pour la manifestation'
+        label: 'Inscription pour'
         properties:
           containerClassAttribute: 'form-event-title'
           fluidAdditionalAttributes:
@@ -101,9 +111,16 @@ renderables:
           - defaultValue: ''
             type: Text
             identifier: mobile
-            label: 'Téléphone portable'
+            label: 'Téléphone'
             properties:
-              elementDescription: ''
+              elementDescription: 'Portable ou  fix'
+              fluidAdditionalAttributes:
+                required: required
+              validationErrorMessages:
+                - code: 1221559976
+                  message: "Il est important de disposer d'un numéro de téléphone pour les communications de dernière minute."
+            validators:
+              - identifier: NotEmpty
           - identifier: email
             defaultValue: ''
             type: Text
@@ -117,12 +134,35 @@ renderables:
             validators:
               - identifier: EmailAddress
               - identifier: NotEmpty
-      - identifier: smmessage
-        defaultValue: ''
-        type: Textarea
-        label: 'Demande'
-      - type: Checkbox
-        identifier: confirmation
+      - identifier: gridrow-5
+        type: GridRow
+        label: 'Chien'
+        renderables:
+          - identifier: dog
+            type: Text
+            label: 'Nom du chien'
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              validationErrorMessages:
+                - code: 1221559977
+                  message: 'Le nom du chien est obligatoire.'
+            validators:
+              - identifier: NotEmpty
+          - identifier: breed
+            type: Text
+            label: 'Race'
+          - identifier: birthdate
+            defaultValue: ''
+            type: Date
+            label: 'Date de naissance'
+            properties:
+              fluidAdditionalAttributes:
+                min: ''
+                max: ''
+                step: 1
+      - identifier: confirmation
+        type: Checkbox
         label: "J'accepte que les données saisies soient utilisées aux fins de l'événement."
         properties:
           elementDescription: ''

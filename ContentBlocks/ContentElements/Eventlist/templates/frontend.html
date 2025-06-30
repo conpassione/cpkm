@@ -11,6 +11,9 @@
         typoscriptObjectPath="tt_content.header"
     />
     <div class="eventcards">
+        <f:if condition="!{eventlist}">
+            <p>{f:translate(key: 'event.no-event', extensionName: 'cpkm')}</p>
+        </f:if>
         <f:for as="event" each="{eventlist}">
             <div class="eventcard" id="event{event.data.uid}">
                 <f:link.page pageUid="{event.data.uid}">

@@ -227,13 +227,18 @@
   }
   .eventdate .eventdate--month,
   .eventdate .eventdate--year {
-    font-size: calc(var(--fs-small) * 0.75);
+    font-size: calc(var(--fs-small) * 0.8);
   }
   .eventtitle {
     font-weight: var(--fw-bold);
   }
   .eventschedule {
     padding-block: var(--gutter);
+  }
+  .button--placeholder {
+    background-color: transparent;
+    outline: 2px solid var(--clr-brand--primary);
+    outline-offset: -2px;
   }
 }
 
