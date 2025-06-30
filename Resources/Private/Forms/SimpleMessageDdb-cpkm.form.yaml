@@ -117,7 +117,7 @@ renderables:
             validators:
               - identifier: EmailAddress
               - identifier: NotEmpty
-      - identifier: sm-message
+      - identifier: message
         defaultValue: ''
         type: Textarea
         label: 'Mitteilung'

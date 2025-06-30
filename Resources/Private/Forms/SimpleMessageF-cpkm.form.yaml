@@ -78,7 +78,7 @@ renderables:
             validators:
               - identifier: EmailAddress
               - identifier: NotEmpty
-      - identifier: smmessage
+      - identifier: message
         defaultValue: ''
         type: Textarea
         label: 'Demande'
