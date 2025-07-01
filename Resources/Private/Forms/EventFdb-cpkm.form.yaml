@@ -1,4 +1,4 @@
-identifier: plauschparcoursd-db-kvm
+identifier: eventF-db-cpkm
 label: "Formulaire d'inscription CSBP Event"
 type: Form
 prototypeName: standard
@@ -35,7 +35,7 @@ finishers:
         pid:
           value: '{eventpid}'
         type:
-          value: 'kvm-registrationform'
+          value: 'cpkm-registrationform'
       elements:
         lastname:
           mapOnDatabaseColumn: 'lastname'

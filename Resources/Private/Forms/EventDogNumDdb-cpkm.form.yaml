@@ -1,5 +1,5 @@
-identifier: EventD-db-cpkm
-label: "Anmeldeformular CSBP Event"
+identifier: EventV2D-db-cpkm
+label: "Anmeldeformular V2 CSBP Event"
 type: Form
 prototypeName: standard
 renderingOptions:
@@ -41,18 +41,14 @@ finishers:
           mapOnDatabaseColumn: 'lastname'
         firstname:
           mapOnDatabaseColumn: 'firstname'
-        mobile:
-          mapOnDatabaseColumn: 'mobile'
         email:
           mapOnDatabaseColumn: 'email'
         event:
           mapOnDatabaseColumn: 'event'
-        dog:
-          mapOnDatabaseColumn: 'dog'
         breed:
           mapOnDatabaseColumn: 'breed'
-        birthdate:
-          mapOnDatabaseColumn: 'birthdate'
+        message:
+          mapOnDatabaseColumn: 'message'
   - identifier: Confirmation
     options:
       message: 'Besten Dank für Deine Anmeldung'
@@ -108,19 +104,6 @@ renderables:
         type: GridRow
         label: 'Kommunikation'
         renderables:
-          - defaultValue: ''
-            type: Text
-            identifier: mobile
-            label: 'Telefon'
-            properties:
-              elementDescription: 'Mobiltelefon oder Festnetz'
-              fluidAdditionalAttributes:
-                required: required
-              validationErrorMessages:
-                - code: 1221559976
-                  message: 'Eine Telefonnummer für kurzfristige Mitteilungen ist wichtig.'
-            validators:
-              - identifier: NotEmpty
           - identifier: email
             defaultValue: ''
             type: Text
@@ -138,29 +121,12 @@ renderables:
         type: GridRow
         label: 'Hund'
         renderables:
-          - identifier: dog
-            type: Text
-            label: 'Hundename'
-            properties:
-              fluidAdditionalAttributes:
-                required: required
-              validationErrorMessages:
-                - code: 1221559977
-                  message: 'Der Hundename ist zwingend nötig.'
-            validators:
-              - identifier: NotEmpty
           - identifier: breed
             type: Text
-            label: 'Rasse'
-          - identifier: birthdate
-            defaultValue: ''
-            type: Date
-            label: 'Geburtsdatum Hund'
-            properties:
-              fluidAdditionalAttributes:
-                min: ''
-                max: ''
-                step: 1
+            label: 'Anzahl Hunde'
+          - identifier: message
+            type: Textarea
+            label: 'Mitteilung'
       - identifier: confirmation
         type: Checkbox
         label: 'Ich bin einverstanden, dass die erfassten Daten für die Zwecke der Veranstaltung verwendet werden.'
