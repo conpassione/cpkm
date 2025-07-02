@@ -57,12 +57,6 @@ renderables:
   - type: Page
     identifier: smpage-1
     renderables:
-      - identifier: info1
-        type: StaticText
-        label: ''
-        properties:
-          text: 'ACHTUNG: pro Hund ist eine Anmeldung erforderlich!'
-          elementClassAttribute: 'cp-accent cp-bold'
       - identifier: event
         defaultValue: 'ERROR: Unable to get Eventname'
         type: Text
