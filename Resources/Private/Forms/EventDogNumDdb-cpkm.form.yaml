@@ -7,24 +7,24 @@ renderingOptions:
 finishers:
   - identifier: EmailToSender
     options:
-      subject: 'Bestätigung Anmeldung CSBP Event für {dog}'
+      subject: 'Bestätigung Anmeldung CSBP Event'
       recipients:
         '{email}': '{lastname} {firstname}'
       senderAddress: 'info@csbp.ch'
       senderName: 'Club Suisse du Berger des Pyrénées'
       addHtmlPart: true
       attachUploads: false
-      title: 'Veranstaltung CSBP - {dog}'
+      title: 'Veranstaltung CSBP'
   - identifier: EmailToReceiver
     options:
-      subject: 'Anmeldung Veranstaltung von {lastname} {firstname} - {dog}'
+      subject: 'Anmeldung Veranstaltung von {lastname} {firstname}'
       recipients:
         info@csbp.ch: 'Club Suisse du Berger des Pyrénées'
       senderAddress: '{email}'
       senderName: '{lastname} {firstname}'
       addHtmlPart: true
       attachUploads: false
-      title: 'Anmeldung Veranstaltung via Website von {firstname} {lastname} - {dog}'
+      title: 'Anmeldung Veranstaltung via Website von {firstname} {lastname}'
   - identifier: SaveToDatabase
     options:
       table: 'tx_conpassione_registrationform'
