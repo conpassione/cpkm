@@ -24,7 +24,7 @@ finishers:
       senderName: '{lastname} {firstname}'
       addHtmlPart: true
       attachUploads: false
-      title: 'Mitgliedschaftsantrag via Website von {firstname} {lastname}'
+      title: 'Mitgliedschaftsantrag von {firstname} {lastname}'
   - identifier: Confirmation
     options:
       message: 'Besten Dank für Ihre Anmeldung. Wir werden uns innerhalb einer Woche bei Ihnen melden.'

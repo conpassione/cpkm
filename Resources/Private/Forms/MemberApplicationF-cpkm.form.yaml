@@ -7,6 +7,7 @@ renderingOptions:
 finishers:
   - identifier: EmailToSender
     options:
+      templateName: SenderFormF
       subject: "Courriel de confirmation d'adhésion"
       recipients:
         '{email}': '{lastname} {firstname}'
@@ -17,6 +18,7 @@ finishers:
       title: "Demande d'adhésion"
   - identifier: EmailToReceiver
     options:
+      templateName: ReceiverFormF
       subject: "Demande d'adhésion de {lastname} {firstname}"
       recipients:
         info@csbp.ch: 'Club Suisse du Berger des Pyrénées'
@@ -24,7 +26,7 @@ finishers:
       senderName: '{lastname} {firstname}'
       addHtmlPart: true
       attachUploads: false
-      title: "Demande d'adhésion via site internet de {firstname} {lastname}"
+      title: "Demande d'adhésion de {firstname} {lastname}"
   - identifier: Confirmation
     options:
       message: "Merci pour la demande. Vous recevrez une réponse de notre part dans un délai d'une semaine."

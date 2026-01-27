@@ -7,7 +7,8 @@ renderingOptions:
 finishers:
   - identifier: EmailToSender
     options:
-      subject: "Confirmation d' CSBP Anmeldung"
+      templateName: SenderFormF
+      subject: "CSBP: Confirmation d'Inscription"
       recipients:
         '{email}': '{lastname} {firstname}'
       senderAddress: 'info@csbp.ch'
@@ -17,14 +18,15 @@ finishers:
       title: 'Manifestation du CSBP'
   - identifier: EmailToReceiver
     options:
-      subject: 'Inscription CSBP Event {lastname} {firstname}'
+      templateName: ReceiverFormF
+      subject: 'Inscription de {lastname} {firstname} pour la manifestation du CSBP'
       recipients:
         info@csbp.ch: 'Club Suisse du Berger des Pyrénées'
       senderAddress: '{email}'
       senderName: '{lastname} {firstname}'
       addHtmlPart: true
       attachUploads: false
-      title: 'Inscription CSBP Event via {firstname} {lastname}'
+      title: 'Inscription CSBP de {firstname} {lastname}'
   - identifier: SaveToDatabase
     options:
       table: 'tx_conpassione_registrationform'

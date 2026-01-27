@@ -16,3 +16,7 @@ ExtensionManagementUtility::addTypoScriptSetup(
    }
 '
 );
+
+$GLOBALS['TYPO3_CONF_VARS']['MAIL']['layoutRootPaths'][36651] = 'EXT:cpkm/Resources/Private/Email/Layouts/';
+$GLOBALS['TYPO3_CONF_VARS']['MAIL']['templateRootPaths'][36651] = 'EXT:cpkm/Resources/Private/Email/Templates/';
+$GLOBALS['TYPO3_CONF_VARS']['MAIL']['partialRootPaths'][36651] = 'EXT:cpkm/Resources/Private/Email/Partials/';
