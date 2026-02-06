@@ -22,7 +22,6 @@
             <h2 class="h3 eventtitle">
                 <f:format.html>{page.pagerecord.subtitle}</f:format.html>
             </h2>
-            <f:format.html>{page.pagerecord.cp_teaser}</f:format.html>
             <div class="eventschedule">
                 <p><f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:event.start"/>:
                     <time datetime="{page.pagerecord.cp_bdate -> f:format.date(format: 'Y-M-d')}">
@@ -37,10 +36,11 @@
                     <span>  >>  </span>
                     <a class="url-link--icon"
                        href="https://www.google.ch/maps/search/{page.pagerecord.cp_location -> f:split(separator=' ') -> f:join(separator='+')}+{page.pagerecord.cp_zip}+{page.pagerecord.cp_city}"
-                       target="_blank">GoogleMaps
+                    target="_blank">GoogleMaps
                     </a>
                 </p>
             </div>
+            <f:format.html>{page.pagerecord.cp_teaser}</f:format.html><br>
         </div>
         <div class="eventnav">
             <f:if condition="{upNavigation}">
