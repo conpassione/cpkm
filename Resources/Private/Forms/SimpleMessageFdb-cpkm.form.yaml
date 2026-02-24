@@ -12,7 +12,7 @@ finishers:
       recipients:
         '{email}': '{lastname} {firstname}'
       senderAddress: 'info@csbp.ch'
-      senderName: 'CSBP'
+      senderName: 'Club Suisse du Berger des Pyrénées'
       addHtmlPart: true
       attachUploads: false
       title: 'Ton demande'
@@ -21,8 +21,8 @@ finishers:
       templateName: ReceiverFormF
       subject: 'Demande de {lastname} {firstname}'
       recipients:
-        info@csbp.ch: 'CSBP'
-      senderAddress: '{email}'
+        info@csbp.ch: 'Club Suisse du Berger des Pyrénées'
+      senderAddress: 'info@csbp.ch'
       senderName: '{lastname} {firstname}'
       addHtmlPart: true
       attachUploads: false

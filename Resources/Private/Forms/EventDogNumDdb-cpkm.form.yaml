@@ -20,7 +20,7 @@ finishers:
       subject: 'Anmeldung Veranstaltung von {lastname} {firstname}'
       recipients:
         info@csbp.ch: 'Club Suisse du Berger des Pyrénées'
-      senderAddress: '{email}'
+      senderAddress: 'info@csbp.ch'
       senderName: '{lastname} {firstname}'
       addHtmlPart: true
       attachUploads: false
