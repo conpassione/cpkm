@@ -17,7 +17,7 @@ use Symfony\Component\DependencyInjection\Attribute\Autoconfigure;
 #[Autoconfigure(tags: [
    [
        'name' => 'console.command',
-       'command' => 'cpkm:archive-litter',
+       'command' => 'csbp:archive-litter',
        'description' => 'Archive litter',
    ]
 ])]
@@ -42,16 +42,16 @@ class ArchiveLitterCommand extends Command
         */
 
         $site = $this->siteFinder->getSiteByPageId(1);
-        $test = (int)$site->getSettings()->get('litter_timelimit');
-        $litter_timelimit = $test;
+        $limit = (int)$site->getSettings()->get('litter_timelimit');
+        $litter_timelimit = $limit;
         $connectionPool = GeneralUtility::makeInstance(ConnectionPool::class);
-        $queryBuilder = $connectionPool->getQueryBuilderForTable('tx_cpkm_domain_model_litter');
+        //$queryBuilder = $connectionPool->getQueryBuilderForTable('tx_cpkm_domain_model_litter');
         $connection = $connectionPool->getConnectionByName('Default');
         $sql = 'update tx_cpkm_domain_model_litter set l_status = 100 where (hidden = 0) AND (starttime = 0) AND (endtime = 0) AND (l_status = 2) AND (l_date < (unix_timestamp(current_timestamp) - 86400*' . $litter_timelimit . '));';
         $statement = $connection->executeStatement($sql);
 
         $io = new SymfonyStyle($input, $output);
-        $io->title('Archives Litters wiht timelimit of ' . $litter_timelimit . ' days');
+        $io->title('Archives Litters with time limit of ' . $litter_timelimit . ' days');
         $io->note($statement . ' Litter(s) archived successfully.');
 
         return Command::SUCCESS;
