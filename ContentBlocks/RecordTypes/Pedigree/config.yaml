@@ -1,5 +1,4 @@
 name: conpassione/pedigree
-typeName: conpassione-pedigree
 title: 'Pedigree'
 group: csbp
 table: tx_cpkm_domain_model_pedigree

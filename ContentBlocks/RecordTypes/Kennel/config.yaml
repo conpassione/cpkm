@@ -1,5 +1,4 @@
 name: conpassione/kennel
-typeName: conpassione-kennel
 title: 'Kennel'
 group: csbp
 table: tx_cpkm_domain_model_kennel
