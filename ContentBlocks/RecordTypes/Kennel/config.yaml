@@ -73,3 +73,8 @@ fields:
     - identifier: k_web
       type: Text
       size: 20
+    - type: Linebreak
+    - identifier: k_notes
+      type: Textarea
+      enableRichtext: true
+      richtextConfiguration: CpDefault

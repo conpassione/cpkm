@@ -57,6 +57,9 @@
 			<trans-unit id="k_web.label" resname="k_web.label">
 				<source>Website</source>
 			</trans-unit>
+			<trans-unit id="k_notes.label" resname="k_notes.label">
+				<source>Litterplanning</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

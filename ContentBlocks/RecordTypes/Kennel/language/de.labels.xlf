@@ -75,6 +75,10 @@
 				<source>Website</source>
 				<target>Website</target>
 			</trans-unit>
+			<trans-unit id="k_notes.label" resname="k_notes.label">
+				<source>Litterplanning</source>
+				<target>Wurfplanung</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

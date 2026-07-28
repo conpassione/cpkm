@@ -46,6 +46,10 @@
                             <f:if condition="{kennel.data.k_web}">
                                 <f:link.external uri="{kennel.data.k_web}" target="_blank" class="url-link--icon">{kennel.data.k_web}</f:link.external>
                             </f:if>
+                            <f:if condition="{kennel.data.k_notes}">
+                                <p><f:translate key="LLL:EXT:cpkm/Resources/Private/Language/locallang.xlf:kennel.notes"/>:</p>
+                                <f:format.html>{kennel.data.k_notes}</f:format.html>
+                            </f:if>
                         </div>
                     </div>
                 </f:for>
